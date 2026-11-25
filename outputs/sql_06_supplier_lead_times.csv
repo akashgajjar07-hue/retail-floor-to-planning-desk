@@ -1,0 +1,6 @@
+supplier_id,name,quoted_lead_time_days,purchase_orders,actual_mean_days,actual_sd_days,min_days,max_days,share_more_than_3_days_late
+SUP-C,Supplier C - China (accessories),21,402,21.4,7.5,3.0,40.0,0.348
+SUP-B,Supplier B - Bangladesh (jersey basics),28,425,27.3,4.2,14.0,39.0,0.172
+SUP-D,"Supplier D - India (linen, modest wear)",18,164,17.7,3.0,11.0,25.0,0.11
+SUP-A,"Supplier A - Turkey (denim, knitwear)",14,373,13.9,2.0,9.0,19.0,0.046
+SUP-E,Supplier E - GCC quick-response,6,148,6.2,1.1,3.0,9.0,0.0

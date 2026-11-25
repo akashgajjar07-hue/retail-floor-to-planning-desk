@@ -1,0 +1,157 @@
+store_id,sku_id,name,supplier_id,abc,service_level,z,d_forecast,sd_daily,sd_source,lead_time_days,lead_time_sd_days,purchase_orders_observed,safety_stock,safety_stock_if_lead_time_constant,reorder_point,order_up_to,on_hand,on_order,inventory_position,days_cover,action,order_qty,size_split,priority_score_aed,core_size_out,unit_margin_aed,priority_rank
+AUH-01,B01,Crew-neck T-shirt White,SUP-B,A,0.98,2.054,8.56,4.68,18 fully in-stock days,27.3,4.2,425,89.6,50.1,323.1,443.0,56,238,294,6.5,ORDER,150,XS:0 S:13 M:8 L:84 XL:25 XXL:20,786.0,True,27,17.0
+AUH-01,B02,Crew-neck T-shirt Black,SUP-B,A,0.98,2.054,7.41,3.54,12 fully in-stock days,27.3,4.2,425,74.7,38.0,276.7,380.4,17,214,231,2.3,ORDER,150,XS:0 S:24 M:34 L:51 XL:24 XXL:17,1233.0,True,27,6.0
+AUH-01,B03,Crew-neck T-shirt Navy,SUP-B,A,0.98,2.054,5.2,3.07,27 fully in-stock days,27.3,4.2,425,55.8,32.9,197.4,270.1,18,120,138,3.5,ORDER,133,XS:7 S:9 M:34 L:47 XL:24 XXL:12,1702.0,True,27,3.0
+AUH-01,B04,V-neck T-shirt White,SUP-B,A,0.98,2.054,3.1,2.5,16 fully in-stock days,27.3,4.2,425,37.9,26.8,122.5,165.9,17,94,111,5.5,ORDER,55,XS:5 S:1 M:22 L:10 XL:17 XXL:0,310.0,False,27,49.0
+AUH-01,B05,Crew-neck T-shirt Grey Marl,SUP-B,A,0.98,2.054,4.46,3.51,24 fully in-stock days,27.3,4.2,425,54.0,37.7,175.7,238.2,5,143,148,1.1,ORDER,91,XS:1 S:9 M:36 L:29 XL:7 XXL:9,748.0,True,27,18.0
+AUH-01,B06,Oversized T-shirt Sand,SUP-B,A,0.98,2.054,2.85,3.22,13 fully in-stock days,27.3,4.2,425,42.5,34.5,120.2,160.1,19,86,105,6.7,ORDER,56,XS:2 S:5 M:3 L:27 XL:15 XXL:4,516.0,True,34,29.0
+AUH-01,B07,Pique Polo White,SUP-B,A,0.98,2.054,3.22,2.82,20 fully in-stock days,27.3,4.2,425,41.2,30.2,129.1,174.2,15,105,120,4.7,ORDER,55,XS:6 S:0 M:8 L:25 XL:11 XXL:5,426.0,True,47,36.0
+AUH-01,B08,Pique Polo Navy,SUP-B,A,0.98,2.054,2.62,1.97,35 fully in-stock days,27.3,4.2,425,31.0,21.2,102.5,139.2,73,0,73,27.9,ORDER,67,XS:0 S:3 M:27 L:20 XL:17 XXL:0,1385.0,False,47,5.0
+AUH-01,B09,Oxford Shirt White,SUP-A,A,0.98,2.054,3.1,1.98,26 fully in-stock days,13.9,2.0,373,19.8,15.1,62.8,106.2,37,38,75,12.0,HOLD,0,,0.0,True,74,
+AUH-01,B10,Oxford Shirt Blue,SUP-A,A,0.98,2.054,2.94,1.85,23 fully in-stock days,13.9,2.0,373,18.6,14.1,59.4,100.6,29,64,93,9.9,HOLD,0,,0.0,True,74,
+AUH-01,B11,Slim Jeans Indigo,SUP-A,A,0.98,2.054,3.47,2.26,15 fully in-stock days,13.9,2.0,373,22.5,17.3,70.6,119.1,62,90,152,17.9,HOLD,0,,0.0,False,104,
+AUH-01,B12,Straight Jeans Black,SUP-A,A,0.98,2.054,3.15,2.71,22 fully in-stock days,13.9,2.0,373,24.5,20.8,68.3,112.3,39,69,108,12.4,HOLD,0,,0.0,False,104,
+AUH-01,B13,Chinos Beige,SUP-A,A,0.98,2.054,2.89,2.39,21 fully in-stock days,13.9,2.0,373,21.9,18.3,62.0,102.5,45,74,119,15.6,HOLD,0,,0.0,True,81,
+AUH-01,B14,Chinos Navy,SUP-A,A,0.98,2.054,2.38,1.54,24 fully in-stock days,13.9,2.0,373,15.4,11.8,48.4,81.7,45,0,45,18.9,ORDER,37,XS:0 S:0 M:6 L:19 XL:10 XXL:2,275.0,False,81,53.0
+AUH-01,B15,Jogger Grey,SUP-A,A,0.98,2.054,2.58,2.26,29 fully in-stock days,13.9,2.0,373,20.3,17.3,56.2,92.3,46,0,46,17.8,ORDER,47,XS:0 S:0 M:17 L:20 XL:10 XXL:0,620.0,False,61,22.0
+AUH-01,B16,Zip Hoodie Black,SUP-A,A,0.98,2.054,2.98,2.44,10 fully in-stock days,13.9,2.0,373,22.4,18.7,63.8,105.5,12,41,53,4.0,ORDER,53,XS:0 S:7 M:22 L:17 XL:6 XXL:1,957.0,True,89,14.0
+AUH-01,B17,Leggings Black,SUP-B,A,0.98,2.054,3.28,1.81,14 fully in-stock days,27.3,4.2,425,34.4,19.4,123.8,169.7,35,83,118,10.7,ORDER,52,XS:0 S:1 M:16 L:19 XL:12 XXL:4,238.0,False,41,58.0
+AUH-01,B18,Ribbed Tank White,SUP-B,C,0.9,1.282,2.55,2.84,13 fully in-stock days,27.3,4.2,425,23.5,19.0,93.0,128.7,7,72,79,2.7,ORDER,50,XS:2 S:4 M:20 L:16 XL:0 XXL:8,266.0,True,19,54.0
+AUH-01,B19,Long-sleeve Modest Tunic Black,SUP-D,A,0.98,2.054,3.13,2.75,17 fully in-stock days,17.7,3.0,164,30.5,23.8,86.1,129.9,23,74,97,7.3,HOLD,0,,0.0,True,69,
+AUH-01,B20,Long-sleeve Modest Tunic Navy,SUP-D,A,0.98,2.054,1.47,1.45,26 fully in-stock days,17.7,3.0,164,15.4,12.6,41.6,62.2,22,46,68,14.9,HOLD,0,,0.0,True,69,
+AUH-01,B21,Cotton Pyjama Set Grey,SUP-B,B,0.95,1.645,1.43,1.5,15 fully in-stock days,27.3,4.2,425,16.3,12.9,55.3,75.3,6,37,43,4.2,ORDER,33,XS:2 S:0 M:9 L:11 XL:11 XXL:0,748.0,True,61,19.0
+AUH-01,B22,Dry-fit Sports T-shirt Black,SUP-B,B,0.95,1.645,1.84,1.36,23 fully in-stock days,27.3,4.2,425,17.3,11.7,67.6,93.4,35,55,90,19.0,HOLD,0,,0.0,False,39,
+AUH-01,B23,Sports Shorts Black,SUP-B,B,0.95,1.645,1.46,1.21,22 fully in-stock days,27.3,4.2,425,14.5,10.4,54.4,74.9,46,0,46,31.5,ORDER,29,XS:0 S:0 M:7 L:10 XL:11 XXL:1,285.0,False,34,52.0
+AUH-01,B24,Lightweight Cardigan Beige,SUP-A,A,0.98,2.054,1.1,1.21,22 fully in-stock days,13.9,2.0,373,10.3,9.3,25.6,41.0,24,37,61,21.8,HOLD,0,,0.0,True,67,
+AUH-01,B25,Ankle Socks 3-pack,SUP-E,A,0.98,2.054,5.93,2.72,42 fully in-stock days,6.2,1.1,148,19.0,13.8,55.5,138.5,95,138,233,16.0,HOLD,0,,0.0,False,17,
+AUH-01,B26,Crew Socks 3-pack,SUP-E,A,0.98,2.054,3.92,2.84,42 fully in-stock days,6.2,1.1,148,16.8,14.5,40.9,95.7,62,21,83,15.8,HOLD,0,,0.0,False,20,
+AUH-01,B27,No-show Socks 3-pack,SUP-E,B,0.95,1.645,2.55,2.24,42 fully in-stock days,6.2,1.1,148,10.2,9.2,25.9,61.5,65,0,65,25.5,HOLD,0,,0.0,False,17,
+AUH-01,A01,Baseball Cap Black,SUP-C,B,0.95,1.645,3.7,2.94,29 fully in-stock days,21.4,7.5,402,50.7,22.4,129.7,181.6,30,97,127,8.1,ORDER,55,OS:55,80.0,False,29,69.0
+AUH-01,A02,Baseball Cap Beige,SUP-C,C,0.9,1.282,2.1,1.8,39 fully in-stock days,21.4,7.5,402,22.8,10.7,67.6,97.1,50,0,50,23.8,ORDER,48,OS:48,512.0,False,29,30.0
+AUH-01,A03,Canvas Tote Bag,SUP-C,B,0.95,1.645,3.14,2.87,37 fully in-stock days,21.4,7.5,402,44.3,21.8,111.3,155.3,0,75,75,0.0,ORDER,81,OS:81,1199.0,False,33,7.0
+AUH-01,A04,Leather Belt Brown,SUP-C,C,0.9,1.282,1.49,1.73,27 fully in-stock days,21.4,7.5,402,17.6,10.3,49.4,70.2,10,38,48,6.7,ORDER,23,OS:23,70.0,False,51,71.0
+AUH-01,A05,Leather Belt Black,SUP-C,B,0.95,1.645,1.85,1.64,40 fully in-stock days,21.4,7.5,402,26.0,12.5,65.6,91.5,0,50,50,0.0,ORDER,42,OS:42,794.0,False,51,16.0
+AUH-01,A06,Everyday Scarf Black,SUP-D,A,0.98,2.054,2.71,1.86,42 fully in-stock days,17.7,3.0,164,23.1,16.1,71.2,109.1,38,75,113,14.0,HOLD,0,,0.0,False,35,
+AUH-01,A07,Everyday Scarf Beige,SUP-D,B,0.95,1.645,2.21,2.22,39 fully in-stock days,17.7,3.0,164,18.8,15.4,57.9,88.8,0,56,56,0.0,ORDER,33,OS:33,67.0,False,35,73.0
+AUH-01,A08,Crossbody Bag Black,SUP-C,B,0.95,1.645,1.52,1.38,36 fully in-stock days,21.4,7.5,402,21.4,10.5,53.9,75.2,16,38,54,10.5,HOLD,0,,0.0,False,69,
+AUH-01,A09,Sunglasses Classic,SUP-C,A,0.98,2.054,1.99,1.53,42 fully in-stock days,21.4,7.5,402,33.8,14.5,76.3,104.2,13,65,78,6.5,HOLD,0,,0.0,False,59,
+AUH-01,A10,Sunglasses Round,SUP-C,B,0.95,1.645,1.5,1.22,40 fully in-stock days,21.4,7.5,402,20.6,9.3,52.6,73.6,0,45,45,0.0,ORDER,29,OS:29,450.0,False,59,35.0
+AUH-01,A11,Phone Crossbody Pouch,SUP-C,C,0.9,1.282,1.12,1.07,34 fully in-stock days,21.4,7.5,402,12.5,6.4,36.5,52.2,5,32,37,4.5,HOLD,0,,0.0,False,44,
+AUH-01,A12,Hair Clip Set,SUP-C,C,0.9,1.282,2.21,1.86,34 fully in-stock days,21.4,7.5,402,23.9,11.0,71.1,102.1,0,50,50,0.0,ORDER,53,OS:53,296.0,False,14,51.0
+AUH-02,B01,Crew-neck T-shirt White,SUP-B,A,0.98,2.054,6.82,5.62,22 fully in-stock days,27.3,4.2,425,84.4,60.2,270.3,365.8,0,190,190,0.0,ORDER,176,XS:6 S:25 M:66 L:51 XL:23 XXL:5,2169.0,True,27,1.0
+AUH-02,B02,Crew-neck T-shirt Black,SUP-B,A,0.98,2.054,4.92,3.78,29 fully in-stock days,27.3,4.2,425,58.8,40.5,192.9,261.8,1,152,153,0.2,ORDER,109,XS:9 S:13 M:30 L:39 XL:14 XXL:4,1078.0,True,27,9.0
+AUH-02,B03,Crew-neck T-shirt Navy,SUP-B,A,0.98,2.054,2.82,1.96,29 fully in-stock days,27.3,4.2,425,32.3,21.0,109.3,148.8,25,114,139,8.9,HOLD,0,,0.0,True,27,
+AUH-02,B04,V-neck T-shirt White,SUP-B,A,0.98,2.054,2.28,1.51,19 fully in-stock days,27.3,4.2,425,25.5,16.2,87.6,119.5,34,75,109,14.9,HOLD,0,,0.0,False,27,
+AUH-02,B05,Crew-neck T-shirt Grey Marl,SUP-B,A,0.98,2.054,3.56,2.64,25 fully in-stock days,27.3,4.2,425,41.8,28.3,138.8,188.6,10,114,124,2.8,ORDER,65,XS:2 S:13 M:28 L:14 XL:8 XXL:0,400.0,True,27,39.0
+AUH-02,B06,Oversized T-shirt Sand,SUP-B,A,0.98,2.054,2.18,1.48,17 fully in-stock days,27.3,4.2,425,24.6,15.8,84.0,114.5,26,68,94,11.9,HOLD,0,,0.0,False,34,
+AUH-02,B07,Pique Polo White,SUP-B,A,0.98,2.054,2.1,1.94,32 fully in-stock days,27.3,4.2,425,27.7,20.8,85.0,114.4,18,84,102,8.6,HOLD,0,,0.0,True,47,
+AUH-02,B08,Pique Polo Navy,SUP-B,A,0.98,2.054,2.11,1.66,24 fully in-stock days,27.3,4.2,425,25.6,17.8,83.2,112.8,9,75,84,4.3,HOLD,0,,0.0,True,47,
+AUH-02,B09,Oxford Shirt White,SUP-A,A,0.98,2.054,1.93,1.51,20 fully in-stock days,13.9,2.0,373,14.1,11.6,40.9,67.9,49,0,49,25.4,HOLD,0,,0.0,False,74,
+AUH-02,B10,Oxford Shirt Blue,SUP-A,A,0.98,2.054,1.74,1.7,31 fully in-stock days,13.9,2.0,373,14.9,13.0,39.0,63.3,15,51,66,8.6,HOLD,0,,0.0,False,74,
+AUH-02,B11,Slim Jeans Indigo,SUP-A,A,0.98,2.054,3.37,2.29,22 fully in-stock days,13.9,2.0,373,22.4,17.6,69.2,116.3,26,76,102,7.7,HOLD,0,,0.0,False,104,
+AUH-02,B12,Straight Jeans Black,SUP-A,A,0.98,2.054,2.12,1.45,10 fully in-stock days,13.9,2.0,373,14.2,11.1,43.6,73.2,66,0,66,31.2,HOLD,0,,0.0,False,104,
+AUH-02,B13,Chinos Beige,SUP-A,A,0.98,2.054,2.54,3.01,20 fully in-stock days,13.9,2.0,373,25.3,23.0,60.6,96.2,2,59,61,0.8,HOLD,0,,0.0,True,81,
+AUH-02,B14,Chinos Navy,SUP-A,A,0.98,2.054,1.73,1.4,24 fully in-stock days,13.9,2.0,373,12.9,10.7,36.9,61.1,32,44,76,18.5,HOLD,0,,0.0,False,81,
+AUH-02,B15,Jogger Grey,SUP-A,A,0.98,2.054,1.99,1.62,29 fully in-stock days,13.9,2.0,373,14.9,12.4,42.5,70.4,38,46,84,19.1,HOLD,0,,0.0,False,61,
+AUH-02,B16,Zip Hoodie Black,SUP-A,A,0.98,2.054,1.45,1.54,29 fully in-stock days,13.9,2.0,373,13.2,11.8,33.3,53.5,24,0,24,16.6,ORDER,30,XS:0 S:5 M:12 L:9 XL:4 XXL:0,826.0,False,89,15.0
+AUH-02,B17,Leggings Black,SUP-B,A,0.98,2.054,2.19,2.3,18 fully in-stock days,27.3,4.2,425,31.1,24.6,90.8,121.4,29,66,95,13.2,HOLD,0,,0.0,False,41,
+AUH-02,B18,Ribbed Tank White,SUP-B,C,0.9,1.282,1.96,1.4,12 fully in-stock days,27.3,4.2,425,14.2,9.4,67.6,95.0,0,57,57,0.0,ORDER,39,XS:6 S:5 M:7 L:12 XL:5 XXL:4,201.0,True,19,61.0
+AUH-02,B19,Long-sleeve Modest Tunic Black,SUP-D,A,0.98,2.054,1.95,1.47,36 fully in-stock days,17.7,3.0,164,17.4,12.7,52.0,79.2,23,59,82,11.8,HOLD,0,,0.0,False,69,
+AUH-02,B20,Long-sleeve Modest Tunic Navy,SUP-D,A,0.98,2.054,1.26,1.39,11 fully in-stock days,17.7,3.0,164,14.3,12.0,36.6,54.2,12,37,49,9.5,HOLD,0,,0.0,True,69,
+AUH-02,B21,Cotton Pyjama Set Grey,SUP-B,B,0.95,1.645,0.89,0.94,12 fully in-stock days,27.3,4.2,425,10.2,8.1,34.3,46.8,2,29,31,2.3,ORDER,16,XS:0 S:3 M:0 L:5 XL:7 XXL:1,204.0,True,61,60.0
+AUH-02,B22,Dry-fit Sports T-shirt Black,SUP-B,B,0.95,1.645,1.56,1.53,29 fully in-stock days,27.3,4.2,425,17.1,13.2,59.6,81.4,12,44,56,7.7,ORDER,26,XS:0 S:0 M:12 L:8 XL:6 XXL:0,139.0,True,39,65.0
+AUH-02,B23,Sports Shorts Black,SUP-B,B,0.95,1.645,1.25,1.45,15 fully in-stock days,27.3,4.2,425,15.2,12.5,49.4,66.9,12,38,50,9.6,HOLD,0,,0.0,True,34,
+AUH-02,B24,Lightweight Cardigan Beige,SUP-A,A,0.98,2.054,1.19,1.22,19 fully in-stock days,13.9,2.0,373,10.6,9.4,27.1,43.8,22,0,22,18.5,ORDER,22,XS:0 S:0 M:8 L:12 XL:2 XXL:0,344.0,True,67,46.0
+AUH-02,B25,Ankle Socks 3-pack,SUP-E,A,0.98,2.054,3.77,2.65,42 fully in-stock days,6.2,1.1,148,15.8,13.5,39.1,91.8,56,109,165,14.9,HOLD,0,,0.0,False,17,
+AUH-02,B26,Crew Socks 3-pack,SUP-E,A,0.98,2.054,2.86,2.27,42 fully in-stock days,6.2,1.1,148,13.2,11.6,30.8,70.9,63,0,63,22.0,HOLD,0,,0.0,False,20,
+AUH-02,B27,No-show Socks 3-pack,SUP-E,B,0.95,1.645,2.12,1.72,42 fully in-stock days,6.2,1.1,148,7.9,7.0,21.0,50.7,64,0,64,30.2,HOLD,0,,0.0,False,17,
+AUH-02,A01,Baseball Cap Black,SUP-C,B,0.95,1.645,1.13,1.24,29 fully in-stock days,21.4,7.5,402,16.7,9.4,40.8,56.6,29,0,29,25.7,ORDER,28,OS:28,343.0,False,29,47.0
+AUH-02,A02,Baseball Cap Beige,SUP-C,C,0.9,1.282,1.0,1.0,27 fully in-stock days,21.4,7.5,402,11.3,5.9,32.7,46.7,4,25,29,4.0,ORDER,18,OS:18,106.0,False,29,67.0
+AUH-02,A03,Canvas Tote Bag,SUP-C,B,0.95,1.645,1.06,1.33,42 fully in-stock days,21.4,7.5,402,16.5,10.1,39.0,53.9,24,0,24,22.7,ORDER,30,OS:30,497.0,False,33,31.0
+AUH-02,A04,Leather Belt Brown,SUP-C,C,0.9,1.282,0.69,0.95,33 fully in-stock days,21.4,7.5,402,8.7,5.7,23.4,33.1,0,14,14,0.0,ORDER,20,OS:20,518.0,False,51,27.0
+AUH-02,A05,Leather Belt Black,SUP-C,B,0.95,1.645,0.75,0.99,27 fully in-stock days,21.4,7.5,402,11.9,7.5,28.1,38.6,0,19,19,0.0,ORDER,20,OS:20,462.0,False,51,33.0
+AUH-02,A06,Everyday Scarf Black,SUP-D,A,0.98,2.054,1.05,1.02,42 fully in-stock days,17.7,3.0,164,10.9,8.8,29.5,44.1,9,28,37,8.6,HOLD,0,,0.0,False,35,
+AUH-02,A07,Everyday Scarf Beige,SUP-D,B,0.95,1.645,0.79,0.97,41 fully in-stock days,17.7,3.0,164,7.8,6.7,21.8,32.9,4,21,25,5.0,HOLD,0,,0.0,False,35,
+AUH-02,A08,Crossbody Bag Black,SUP-C,B,0.95,1.645,0.41,0.65,38 fully in-stock days,21.4,7.5,402,7.0,4.9,15.7,21.4,10,14,24,24.6,HOLD,0,,0.0,False,69,
+AUH-02,A09,Sunglasses Classic,SUP-C,A,0.98,2.054,0.78,0.89,39 fully in-stock days,21.4,7.5,402,14.7,8.4,31.4,42.4,0,25,25,0.0,ORDER,18,OS:18,378.0,False,59,42.0
+AUH-02,A10,Sunglasses Round,SUP-C,B,0.95,1.645,0.51,0.73,32 fully in-stock days,21.4,7.5,402,8.3,5.5,19.2,26.3,13,0,13,25.6,ORDER,14,OS:14,363.0,False,59,43.0
+AUH-02,A11,Phone Crossbody Pouch,SUP-C,C,0.9,1.282,0.39,0.72,42 fully in-stock days,21.4,7.5,402,5.6,4.2,13.9,19.4,7,12,19,18.0,HOLD,0,,0.0,False,44,
+AUH-02,A12,Hair Clip Set,SUP-C,C,0.9,1.282,0.58,0.76,42 fully in-stock days,21.4,7.5,402,7.1,4.5,19.5,27.6,10,19,29,17.3,HOLD,0,,0.0,False,14,
+AUH-03,B01,Crew-neck T-shirt White,SUP-B,A,0.98,2.054,3.09,2.5,28 fully in-stock days,27.3,4.2,425,37.9,26.8,122.0,165.2,66,0,66,21.4,ORDER,100,XS:3 S:27 M:37 L:30 XL:3 XXL:0,2002.0,False,27,2.0
+AUH-03,B02,Crew-neck T-shirt Black,SUP-B,A,0.98,2.054,3.23,2.14,15 fully in-stock days,27.3,4.2,425,36.2,22.9,124.2,169.3,29,49,78,9.0,ORDER,92,XS:2 S:18 M:29 L:25 XL:18 XXL:0,1516.0,True,27,4.0
+AUH-03,B03,Crew-neck T-shirt Navy,SUP-B,A,0.98,2.054,1.8,1.42,16 fully in-stock days,27.3,4.2,425,21.8,15.3,70.8,96.0,50,0,50,27.8,ORDER,47,XS:6 S:7 M:11 L:15 XL:6 XXL:2,562.0,False,27,25.0
+AUH-03,B04,V-neck T-shirt White,SUP-B,A,0.98,2.054,1.24,1.13,14 fully in-stock days,27.3,4.2,425,16.2,12.1,50.1,67.5,35,0,35,28.2,ORDER,33,XS:0 S:2 M:17 L:9 XL:5 XXL:0,408.0,False,27,38.0
+AUH-03,B05,Crew-neck T-shirt Grey Marl,SUP-B,A,0.98,2.054,2.14,1.46,16 fully in-stock days,27.3,4.2,425,24.3,15.7,82.6,112.5,28,63,91,13.1,HOLD,0,,0.0,False,27,
+AUH-03,B06,Oversized T-shirt Sand,SUP-B,A,0.98,2.054,0.99,0.99,25 fully in-stock days,27.3,4.2,425,13.7,10.7,40.6,54.4,30,0,30,30.4,ORDER,25,XS:1 S:3 M:12 L:3 XL:6 XXL:0,361.0,False,34,44.0
+AUH-03,B07,Pique Polo White,SUP-B,A,0.98,2.054,1.27,1.16,29 fully in-stock days,27.3,4.2,425,16.6,12.5,51.1,68.8,4,46,50,3.2,ORDER,19,XS:0 S:6 M:7 L:5 XL:1 XXL:0,51.0,True,47,74.0
+AUH-03,B08,Pique Polo Navy,SUP-B,A,0.98,2.054,1.18,1.22,18 fully in-stock days,27.3,4.2,425,16.6,13.1,48.8,65.4,16,42,58,13.5,HOLD,0,,0.0,False,47,
+AUH-03,B09,Oxford Shirt White,SUP-A,A,0.98,2.054,1.28,1.13,16 fully in-stock days,13.9,2.0,373,10.2,8.7,28.0,45.9,11,32,43,8.6,HOLD,0,,0.0,False,74,
+AUH-03,B10,Oxford Shirt Blue,SUP-A,A,0.98,2.054,0.9,0.95,31 fully in-stock days,13.9,2.0,373,8.2,7.3,20.7,33.3,21,0,21,23.3,HOLD,0,,0.0,False,74,
+AUH-03,B11,Slim Jeans Indigo,SUP-A,A,0.98,2.054,1.4,1.88,28 fully in-stock days,13.9,2.0,373,15.5,14.4,34.9,54.5,29,0,29,20.8,ORDER,26,XS:0 S:0 M:16 L:5 XL:5 XXL:0,616.0,False,104,23.0
+AUH-03,B12,Straight Jeans Black,SUP-A,A,0.98,2.054,0.82,1.18,22 fully in-stock days,13.9,2.0,373,9.7,9.0,21.0,32.5,19,30,49,23.2,HOLD,0,,0.0,True,104,
+AUH-03,B13,Chinos Beige,SUP-A,A,0.98,2.054,1.08,1.27,36 fully in-stock days,13.9,2.0,373,10.7,9.7,25.7,40.9,17,0,17,15.7,ORDER,24,XS:1 S:0 M:8 L:13 XL:2 XXL:0,708.0,True,81,20.0
+AUH-03,B14,Chinos Navy,SUP-A,A,0.98,2.054,0.84,1.27,25 fully in-stock days,13.9,2.0,373,10.3,9.7,22.0,33.8,19,0,19,22.6,ORDER,15,XS:0 S:0 M:12 L:1 XL:2 XXL:0,244.0,True,81,55.0
+AUH-03,B15,Jogger Grey,SUP-A,A,0.98,2.054,0.83,0.91,14 fully in-stock days,13.9,2.0,373,7.8,7.0,19.2,30.8,41,0,41,49.6,HOLD,0,,0.0,False,61,
+AUH-03,B16,Zip Hoodie Black,SUP-A,A,0.98,2.054,0.73,1.09,assumed (too few fully in-stock days),13.9,2.0,373,8.8,8.3,18.9,29.1,7,18,25,9.6,HOLD,0,,0.0,True,89,
+AUH-03,B17,Leggings Black,SUP-B,A,0.98,2.054,1.31,1.57,24 fully in-stock days,27.3,4.2,425,20.3,16.9,56.0,74.4,9,37,46,6.9,ORDER,29,XS:0 S:9 M:14 L:4 XL:2 XXL:0,411.0,True,41,37.0
+AUH-03,B18,Ribbed Tank White,SUP-B,C,0.9,1.282,1.05,1.13,assumed (too few fully in-stock days),27.3,4.2,425,9.4,7.5,38.0,52.7,8,32,40,7.6,HOLD,0,,0.0,True,19,
+AUH-03,B19,Long-sleeve Modest Tunic Black,SUP-D,A,0.98,2.054,1.14,1.07,13 fully in-stock days,17.7,3.0,164,11.6,9.2,31.8,47.8,6,32,38,5.3,HOLD,0,,0.0,True,69,
+AUH-03,B20,Long-sleeve Modest Tunic Navy,SUP-D,A,0.98,2.054,0.92,1.07,assumed (too few fully in-stock days),17.7,3.0,164,10.8,9.3,27.1,40.0,14,20,34,15.2,HOLD,0,,0.0,True,69,
+AUH-03,B21,Cotton Pyjama Set Grey,SUP-B,B,0.95,1.645,0.59,0.84,assumed (too few fully in-stock days),27.3,4.2,425,8.3,7.2,24.4,32.6,6,16,22,10.2,ORDER,11,XS:0 S:2 M:5 L:0 XL:4 XXL:0,144.0,True,61,64.0
+AUH-03,B22,Dry-fit Sports T-shirt Black,SUP-B,B,0.95,1.645,0.86,1.34,12 fully in-stock days,27.3,4.2,425,13.0,11.5,36.3,48.3,4,24,28,4.7,ORDER,21,XS:0 S:0 M:13 L:8 XL:0 XXL:0,323.0,True,39,48.0
+AUH-03,B23,Sports Shorts Black,SUP-B,B,0.95,1.645,0.34,0.59,38 fully in-stock days,27.3,4.2,425,5.6,5.0,14.9,19.7,11,21,32,32.1,HOLD,0,,0.0,False,34,
+AUH-03,B24,Lightweight Cardigan Beige,SUP-A,A,0.98,2.054,0.66,0.89,assumed (too few fully in-stock days),13.9,2.0,373,7.3,6.8,16.5,25.8,21,0,21,31.7,HOLD,0,,0.0,False,67,
+AUH-03,B25,Ankle Socks 3-pack,SUP-E,A,0.98,2.054,1.75,1.49,42 fully in-stock days,6.2,1.1,148,8.5,7.6,19.3,43.8,40,60,100,22.8,HOLD,0,,0.0,False,17,
+AUH-03,B26,Crew Socks 3-pack,SUP-E,A,0.98,2.054,1.36,1.29,42 fully in-stock days,6.2,1.1,148,7.2,6.6,15.6,34.7,20,40,60,14.7,HOLD,0,,0.0,False,20,
+AUH-03,B27,No-show Socks 3-pack,SUP-E,B,0.95,1.645,1.07,1.16,42 fully in-stock days,6.2,1.1,148,5.1,4.7,11.7,26.6,44,0,44,41.2,HOLD,0,,0.0,False,17,
+AUH-03,A01,Baseball Cap Black,SUP-C,B,0.95,1.645,0.77,0.94,39 fully in-stock days,21.4,7.5,402,11.9,7.1,28.4,39.2,14,25,39,18.1,HOLD,0,,0.0,False,29,
+AUH-03,A02,Baseball Cap Beige,SUP-C,C,0.9,1.282,0.5,0.71,41 fully in-stock days,21.4,7.5,402,6.4,4.2,17.0,24.0,16,0,16,32.0,ORDER,9,OS:9,30.0,False,29,76.0
+AUH-03,A03,Canvas Tote Bag,SUP-C,B,0.95,1.645,0.46,0.74,37 fully in-stock days,21.4,7.5,402,8.0,5.7,17.7,24.1,12,19,31,26.3,HOLD,0,,0.0,False,33,
+AUH-03,A04,Leather Belt Brown,SUP-C,C,0.9,1.282,0.32,0.57,42 fully in-stock days,21.4,7.5,402,4.5,3.4,11.4,15.9,10,0,10,31.1,ORDER,6,OS:6,72.0,False,51,70.0
+AUH-03,A05,Leather Belt Black,SUP-C,B,0.95,1.645,0.39,0.63,40 fully in-stock days,21.4,7.5,402,6.8,4.8,15.2,20.7,0,13,13,0.0,ORDER,8,OS:8,110.0,False,51,66.0
+AUH-03,A06,Everyday Scarf Black,SUP-D,A,0.98,2.054,0.62,0.78,33 fully in-stock days,17.7,3.0,164,7.8,6.8,18.7,27.3,0,19,19,0.0,HOLD,0,,0.0,False,35,
+AUH-03,A07,Everyday Scarf Beige,SUP-D,B,0.95,1.645,0.43,0.66,38 fully in-stock days,17.7,3.0,164,5.0,4.5,12.6,18.6,4,14,18,9.3,HOLD,0,,0.0,False,35,
+AUH-03,A08,Crossbody Bag Black,SUP-C,B,0.95,1.645,0.28,0.57,42 fully in-stock days,21.4,7.5,402,5.5,4.3,11.4,15.3,7,0,7,25.3,ORDER,9,OS:9,305.0,False,69,50.0
+AUH-03,A09,Sunglasses Classic,SUP-C,A,0.98,2.054,0.34,0.6,42 fully in-stock days,21.4,7.5,402,7.8,5.7,15.1,19.9,7,17,24,20.4,HOLD,0,,0.0,False,59,
+AUH-03,A10,Sunglasses Round,SUP-C,B,0.95,1.645,0.54,0.87,25 fully in-stock days,21.4,7.5,402,9.3,6.6,20.8,28.3,0,12,12,0.0,ORDER,17,OS:17,517.0,False,59,28.0
+AUH-03,A11,Phone Crossbody Pouch,SUP-C,C,0.9,1.282,0.29,0.53,37 fully in-stock days,21.4,7.5,402,4.2,3.2,10.3,14.3,0,8,8,0.0,ORDER,7,OS:7,100.0,False,44,68.0
+AUH-03,A12,Hair Clip Set,SUP-C,C,0.9,1.282,0.32,0.6,42 fully in-stock days,21.4,7.5,402,4.7,3.6,11.5,16.0,10,0,10,31.3,ORDER,6,OS:6,21.0,False,14,77.0
+AUH-04,B01,Crew-neck T-shirt White,SUP-B,A,0.98,2.054,4.49,2.63,17 fully in-stock days,27.3,4.2,425,48.1,28.2,170.6,233.5,11,123,134,2.4,ORDER,100,XS:5 S:18 M:40 L:22 XL:15 XXL:0,988.0,True,27,12.0
+AUH-04,B02,Crew-neck T-shirt Black,SUP-B,A,0.98,2.054,4.09,2.89,17 fully in-stock days,27.3,4.2,425,47.1,31.0,158.5,215.7,13,110,123,3.2,ORDER,93,XS:3 S:23 M:26 L:25 XL:9 XXL:7,959.0,False,27,13.0
+AUH-04,B03,Crew-neck T-shirt Navy,SUP-B,A,0.98,2.054,2.27,2.25,20 fully in-stock days,27.3,4.2,425,31.2,24.1,93.1,125.0,13,59,72,5.7,ORDER,53,XS:3 S:9 M:20 L:9 XL:12 XXL:0,570.0,True,27,24.0
+AUH-04,B04,V-neck T-shirt White,SUP-B,A,0.98,2.054,1.6,1.36,19 fully in-stock days,27.3,4.2,425,20.2,14.6,63.9,86.3,8,49,57,5.0,ORDER,30,XS:2 S:8 M:12 L:5 XL:3 XXL:0,186.0,True,27,63.0
+AUH-04,B05,Crew-neck T-shirt Grey Marl,SUP-B,A,0.98,2.054,2.43,2.03,25 fully in-stock days,27.3,4.2,425,30.3,21.8,96.6,130.6,32,74,106,13.2,HOLD,0,,0.0,False,27,
+AUH-04,B06,Oversized T-shirt Sand,SUP-B,A,0.98,2.054,1.72,2.33,12 fully in-stock days,27.3,4.2,425,29.1,25.0,76.0,100.1,1,44,45,0.6,ORDER,56,XS:0 S:12 M:21 L:17 XL:6 XXL:0,1118.0,True,34,8.0
+AUH-04,B07,Pique Polo White,SUP-B,A,0.98,2.054,1.53,1.66,32 fully in-stock days,27.3,4.2,425,22.2,17.8,64.0,85.5,42,0,42,27.4,ORDER,44,XS:5 S:11 M:14 L:5 XL:7 XXL:2,1036.0,False,47,10.0
+AUH-04,B08,Pique Polo Navy,SUP-B,A,0.98,2.054,1.59,1.66,20 fully in-stock days,27.3,4.2,425,22.5,17.8,65.9,88.2,7,49,56,4.4,ORDER,33,XS:0 S:9 M:6 L:16 XL:2 XXL:0,467.0,True,47,32.0
+AUH-04,B09,Oxford Shirt White,SUP-A,A,0.98,2.054,1.78,1.43,12 fully in-stock days,13.9,2.0,373,13.2,10.9,37.8,62.7,18,38,56,10.1,HOLD,0,,0.0,False,74,
+AUH-04,B10,Oxford Shirt Blue,SUP-A,A,0.98,2.054,1.23,1.59,24 fully in-stock days,13.9,2.0,373,13.2,12.2,30.3,47.4,25,0,25,20.4,ORDER,23,XS:0 S:10 M:5 L:6 XL:2 XXL:0,390.0,False,74,40.0
+AUH-04,B11,Slim Jeans Indigo,SUP-A,A,0.98,2.054,1.99,1.86,25 fully in-stock days,13.9,2.0,373,16.4,14.2,44.1,71.9,26,46,72,13.1,HOLD,0,,0.0,True,104,
+AUH-04,B12,Straight Jeans Black,SUP-A,A,0.98,2.054,1.92,1.77,17 fully in-stock days,13.9,2.0,373,15.7,13.6,42.4,69.3,26,35,61,13.5,HOLD,0,,0.0,True,104,
+AUH-04,B13,Chinos Beige,SUP-A,A,0.98,2.054,0.95,0.97,27 fully in-stock days,13.9,2.0,373,8.4,7.5,21.6,34.9,23,38,61,24.2,HOLD,0,,0.0,False,81,
+AUH-04,B14,Chinos Navy,SUP-A,A,0.98,2.054,1.05,1.26,assumed (too few fully in-stock days),13.9,2.0,373,10.6,9.6,25.1,39.8,15,29,44,14.3,HOLD,0,,0.0,True,81,
+AUH-04,B15,Jogger Grey,SUP-A,A,0.98,2.054,0.89,1.07,28 fully in-stock days,13.9,2.0,373,9.0,8.2,21.4,33.9,30,0,30,33.5,HOLD,0,,0.0,False,61,
+AUH-04,B16,Zip Hoodie Black,SUP-A,A,0.98,2.054,1.25,1.61,10 fully in-stock days,13.9,2.0,373,13.4,12.3,30.7,48.1,7,21,28,5.6,ORDER,21,XS:0 S:5 M:2 L:14 XL:0 XXL:0,239.0,True,89,57.0
+AUH-04,B17,Leggings Black,SUP-B,A,0.98,2.054,1.48,1.65,17 fully in-stock days,27.3,4.2,425,21.8,17.7,62.1,82.8,6,43,49,4.1,ORDER,34,XS:0 S:5 M:17 L:9 XL:1 XXL:2,537.0,True,41,26.0
+AUH-04,B18,Ribbed Tank White,SUP-B,C,0.9,1.282,1.2,1.37,29 fully in-stock days,27.3,4.2,425,11.2,9.1,44.0,60.8,15,17,32,12.5,ORDER,29,XS:1 S:4 M:7 L:10 XL:7 XXL:0,241.0,False,19,56.0
+AUH-04,B19,Long-sleeve Modest Tunic Black,SUP-D,A,0.98,2.054,1.2,1.7,20 fully in-stock days,17.7,3.0,164,16.4,14.7,37.6,54.4,16,38,54,13.4,HOLD,0,,0.0,True,69,
+AUH-04,B20,Long-sleeve Modest Tunic Navy,SUP-D,A,0.98,2.054,0.97,1.14,15 fully in-stock days,17.7,3.0,164,11.5,9.9,28.7,42.2,17,24,41,17.6,HOLD,0,,0.0,False,69,
+AUH-04,B21,Cotton Pyjama Set Grey,SUP-B,B,0.95,1.645,0.77,0.88,12 fully in-stock days,27.3,4.2,425,9.2,7.5,30.2,41.0,11,19,30,14.3,ORDER,12,XS:0 S:1 M:4 L:0 XL:7 XXL:0,14.0,False,61,78.0
+AUH-04,B22,Dry-fit Sports T-shirt Black,SUP-B,B,0.95,1.645,0.9,1.1,16 fully in-stock days,27.3,4.2,425,11.3,9.5,35.9,48.5,9,28,37,10.0,HOLD,0,,0.0,True,39,
+AUH-04,B23,Sports Shorts Black,SUP-B,B,0.95,1.645,0.85,1.19,13 fully in-stock days,27.3,4.2,425,11.8,10.2,35.1,47.0,9,24,33,10.6,ORDER,14,XS:0 S:0 M:7 L:7 XL:0 XXL:0,70.0,True,34,72.0
+AUH-04,B24,Lightweight Cardigan Beige,SUP-A,A,0.98,2.054,1.01,1.14,12 fully in-stock days,13.9,2.0,373,9.7,8.7,23.8,38.0,8,19,27,7.9,HOLD,0,,0.0,True,67,
+AUH-04,B25,Ankle Socks 3-pack,SUP-E,A,0.98,2.054,2.41,2.27,42 fully in-stock days,6.2,1.1,148,12.7,11.6,27.5,61.3,78,0,78,32.4,HOLD,0,,0.0,False,17,
+AUH-04,B26,Crew Socks 3-pack,SUP-E,A,0.98,2.054,2.21,1.54,42 fully in-stock days,6.2,1.1,148,9.2,7.8,22.8,53.8,47,0,47,21.2,HOLD,0,,0.0,False,20,
+AUH-04,B27,No-show Socks 3-pack,SUP-E,B,0.95,1.645,1.34,1.35,42 fully in-stock days,6.2,1.1,148,6.0,5.5,14.2,33.0,40,0,40,29.9,HOLD,0,,0.0,False,17,
+AUH-04,A01,Baseball Cap Black,SUP-C,B,0.95,1.645,1.43,1.49,37 fully in-stock days,21.4,7.5,402,20.9,11.3,51.5,71.6,0,44,44,0.0,ORDER,28,OS:28,219.0,False,29,59.0
+AUH-04,A02,Baseball Cap Beige,SUP-C,C,0.9,1.282,0.87,0.99,35 fully in-stock days,21.4,7.5,402,10.2,5.9,28.7,40.9,15,29,44,17.3,HOLD,0,,0.0,False,29,
+AUH-04,A03,Canvas Tote Bag,SUP-C,B,0.95,1.645,1.52,1.55,35 fully in-stock days,21.4,7.5,402,22.0,11.8,54.4,75.7,0,34,34,0.0,ORDER,42,OS:42,675.0,False,33,21.0
+AUH-04,A04,Leather Belt Brown,SUP-C,C,0.9,1.282,0.48,0.69,41 fully in-stock days,21.4,7.5,402,6.1,4.1,16.3,23.0,0,17,17,0.0,HOLD,0,,0.0,False,51,
+AUH-04,A05,Leather Belt Black,SUP-C,B,0.95,1.645,0.79,0.91,38 fully in-stock days,21.4,7.5,402,11.9,6.9,28.9,40.0,13,0,13,16.4,ORDER,28,OS:28,1013.0,False,51,11.0
+AUH-04,A06,Everyday Scarf Black,SUP-D,A,0.98,2.054,1.0,1.0,38 fully in-stock days,17.7,3.0,164,10.6,8.6,28.2,42.2,30,0,30,30.1,HOLD,0,,0.0,False,35,
+AUH-04,A07,Everyday Scarf Beige,SUP-D,B,0.95,1.645,1.01,1.1,40 fully in-stock days,17.7,3.0,164,9.1,7.6,27.1,41.2,16,0,16,15.8,ORDER,26,OS:26,456.0,False,35,34.0
+AUH-04,A08,Crossbody Bag Black,SUP-C,B,0.95,1.645,0.64,0.82,38 fully in-stock days,21.4,7.5,402,10.0,6.3,23.6,32.5,7,17,24,11.0,HOLD,0,,0.0,False,69,
+AUH-04,A09,Sunglasses Classic,SUP-C,A,0.98,2.054,0.79,1.04,40 fully in-stock days,21.4,7.5,402,15.6,9.9,32.4,43.4,0,29,29,0.0,ORDER,15,OS:15,200.0,False,59,62.0
+AUH-04,A10,Sunglasses Round,SUP-C,B,0.95,1.645,0.71,0.94,39 fully in-stock days,21.4,7.5,402,11.3,7.1,26.4,36.4,0,20,20,0.0,ORDER,17,OS:17,380.0,False,59,41.0
+AUH-04,A11,Phone Crossbody Pouch,SUP-C,C,0.9,1.282,0.43,0.66,39 fully in-stock days,21.4,7.5,402,5.7,3.9,14.9,21.0,8,0,8,18.5,ORDER,13,OS:13,359.0,False,44,45.0
+AUH-04,A12,Hair Clip Set,SUP-C,C,0.9,1.282,0.73,0.86,39 fully in-stock days,21.4,7.5,402,8.7,5.1,24.3,34.6,0,22,22,0.0,ORDER,13,OS:13,33.0,False,14,75.0

@@ -1,0 +1,166 @@
+{
+ "policy_comparison": [
+  {
+   "metric": "fill_rate_total",
+   "benchmark": 0.8213675061446942,
+   "proposed": 0.887584847821327,
+   "difference": 0.06621734167663273
+  },
+  {
+   "metric": "fill_rate_basics",
+   "benchmark": 0.8236800466355763,
+   "proposed": 0.8993795802798135,
+   "difference": 0.0756995336442372
+  },
+  {
+   "metric": "fill_rate_seasonal",
+   "benchmark": 0.8076780872565935,
+   "proposed": 0.8250234664016344,
+   "difference": 0.017345379145040862
+  },
+  {
+   "metric": "lost_units_basics",
+   "benchmark": 16938.0,
+   "proposed": 9666.0,
+   "difference": -7272.0
+  },
+  {
+   "metric": "lost_margin_basics_aed",
+   "benchmark": 707995.0,
+   "proposed": 481102.0,
+   "difference": -226893.0
+  },
+  {
+   "metric": "lost_margin_aed",
+   "benchmark": 976962.0,
+   "proposed": 749628.0,
+   "difference": -227334.0
+  },
+  {
+   "metric": "revenue_aed",
+   "benchmark": 6517778.0,
+   "proposed": 6933454.2,
+   "difference": 415676.2000000002
+  },
+  {
+   "metric": "gross_margin_aed",
+   "benchmark": 4485328.0,
+   "proposed": 4745177.2,
+   "difference": 259849.2000000002
+  },
+  {
+   "metric": "avg_inventory_value_aed",
+   "benchmark": 236300.12874251496,
+   "proposed": 219277.14670658682,
+   "difference": -17022.982035928144
+  },
+  {
+   "metric": "avg_inventory_value_basics_aed",
+   "benchmark": 105065.15868263473,
+   "proposed": 101301.34131736527,
+   "difference": -3763.8173652694677
+  },
+  {
+   "metric": "holding_cost_aed",
+   "benchmark": 54057.70068493151,
+   "proposed": 50163.40205479452,
+   "difference": -3894.2986301369892
+  },
+  {
+   "metric": "holding_cost_basics_aed",
+   "benchmark": 24035.45410958904,
+   "proposed": 23174.416438356166,
+   "difference": -861.0376712328762
+  },
+  {
+   "metric": "transfer_cost_aed",
+   "benchmark": 0.0,
+   "proposed": 34111.5,
+   "difference": 34111.5
+  },
+  {
+   "metric": "transfers",
+   "benchmark": 0.0,
+   "proposed": 453.0,
+   "difference": 453.0
+  },
+  {
+   "metric": "transfer_units",
+   "benchmark": 0.0,
+   "proposed": 4621.0,
+   "difference": 4621.0
+  },
+  {
+   "metric": "season_end_leftover_units",
+   "benchmark": 1933.0,
+   "proposed": 246.0,
+   "difference": -1687.0
+  },
+  {
+   "metric": "salvage_loss_aed",
+   "benchmark": 43916.6,
+   "proposed": 7956.2,
+   "difference": -35960.4
+  },
+  {
+   "metric": "net_contribution_aed",
+   "benchmark": 4387353.699315069,
+   "proposed": 4652946.097945206,
+   "difference": 265592.3986301366
+  },
+  {
+   "metric": "size_instock_rate_basics",
+   "benchmark": 0.8117099135063207,
+   "proposed": 0.8288371174318031,
+   "difference": 0.017127203925482393
+  },
+  {
+   "metric": "broken_size_run_rate",
+   "benchmark": 0.32138847305389223,
+   "proposed": 0.2312250499001996,
+   "difference": -0.09016342315369263
+  },
+  {
+   "metric": "purchase_order_lines",
+   "benchmark": 6376.0,
+   "proposed": 9138.0,
+   "difference": 2762.0
+  },
+  {
+   "metric": "sell_through_RAMADAN_EID",
+   "benchmark": 0.9425686336383717,
+   "proposed": 0.9548753550015778,
+   "difference": 0.012306721363206097
+  },
+  {
+   "metric": "revenue_RAMADAN_EID_aed",
+   "benchmark": 492189.4,
+   "proposed": 488575.80000000005,
+   "difference": -3613.5999999999767
+  },
+  {
+   "metric": "leftover_RAMADAN_EID_units",
+   "benchmark": 182.0,
+   "proposed": 143.0,
+   "difference": -39.0
+  },
+  {
+   "metric": "sell_through_SUMMER",
+   "benchmark": 0.8231134458026064,
+   "proposed": 0.9895949085766239,
+   "difference": 0.16648146277401754
+  },
+  {
+   "metric": "revenue_SUMMER_aed",
+   "benchmark": 800129.6,
+   "proposed": 898545.8,
+   "difference": 98416.20000000007
+  },
+  {
+   "metric": "leftover_SUMMER_units",
+   "benchmark": 1751.0,
+   "proposed": 103.0,
+   "difference": -1648.0
+  }
+ ]
+}

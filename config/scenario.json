@@ -1,0 +1,341 @@
+{
+  "_about": "Every setting used to generate the synthetic dataset. All stores, SKUs, suppliers and numbers are hypothetical. Nothing here describes any real retailer's supply chain.",
+  "seed": 20261130,
+  "start_date": "2026-01-01",
+  "end_date": "2026-11-30",
+  "as_of_date": "2026-11-30",
+  "currency": "AED",
+  "calendar_notes": "Islamic calendar dates are approximate (astronomical estimates); real dates depend on moon sighting. UAE weekend is Saturday-Sunday; Friday is a busy half-working day.",
+  "events": [
+    {
+      "name": "Ramadan",
+      "start": "2026-02-18",
+      "end": "2026-03-19",
+      "index": 1.05,
+      "applies_to": "apparel"
+    },
+    {
+      "name": "Last 10 nights of Ramadan (Eid outfit buying)",
+      "start": "2026-03-10",
+      "end": "2026-03-19",
+      "index": 1.45,
+      "applies_to": "apparel"
+    },
+    {
+      "name": "Eid al-Fitr holiday",
+      "start": "2026-03-20",
+      "end": "2026-03-22",
+      "index": 1.2,
+      "applies_to": "all"
+    },
+    {
+      "name": "Eid al-Adha run-up",
+      "start": "2026-05-20",
+      "end": "2026-05-26",
+      "index": 1.3,
+      "applies_to": "all"
+    },
+    {
+      "name": "Back to school",
+      "start": "2026-08-20",
+      "end": "2026-09-06",
+      "index": 1.25,
+      "applies_to": "basics"
+    },
+    {
+      "name": "White Friday week",
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "index": 1.4,
+      "applies_to": "all"
+    },
+    {
+      "name": "National Day run-up",
+      "start": "2026-11-28",
+      "end": "2026-11-30",
+      "index": 1.15,
+      "applies_to": "all"
+    }
+  ],
+  "day_of_week_index": {
+    "Mon": 0.85,
+    "Tue": 0.85,
+    "Wed": 0.9,
+    "Thu": 1.0,
+    "Fri": 1.15,
+    "Sat": 1.3,
+    "Sun": 1.15
+  },
+  "stores": [
+    {
+      "store_id": "AUH-01",
+      "name": "Flagship - tourist-heavy mall",
+      "base": 1.5,
+      "monthly_index": [
+        1.15,
+        1.15,
+        1.1,
+        1.0,
+        0.95,
+        0.8,
+        0.8,
+        0.8,
+        0.9,
+        1.05,
+        1.1,
+        1.15
+      ],
+      "category_mult": {
+        "basics": 1.0,
+        "seasonal": 1.1,
+        "accessories": 1.4
+      },
+      "size_shift": [
+        -0.01,
+        -0.02,
+        -0.02,
+        0.02,
+        0.02,
+        0.01
+      ],
+      "weekend_extra": 1.0
+    },
+    {
+      "store_id": "AUH-02",
+      "name": "Residential community mall - families",
+      "base": 1.0,
+      "monthly_index": [
+        1.0,
+        1.0,
+        1.05,
+        1.0,
+        1.0,
+        0.95,
+        0.8,
+        0.85,
+        1.05,
+        1.0,
+        1.0,
+        1.05
+      ],
+      "category_mult": {
+        "basics": 1.2,
+        "seasonal": 0.9,
+        "accessories": 0.8
+      },
+      "size_shift": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weekend_extra": 1.0
+    },
+    {
+      "store_id": "AUH-03",
+      "name": "Neighbourhood store - compact",
+      "base": 0.6,
+      "monthly_index": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.95,
+        0.9,
+        0.9,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "category_mult": {
+        "basics": 1.1,
+        "seasonal": 0.8,
+        "accessories": 0.9
+      },
+      "size_shift": [
+        0.01,
+        0.01,
+        0,
+        0,
+        -0.01,
+        -0.01
+      ],
+      "weekend_extra": 1.0
+    },
+    {
+      "store_id": "AUH-04",
+      "name": "Waterfront lifestyle store - weekend leisure",
+      "base": 0.8,
+      "monthly_index": [
+        1.15,
+        1.15,
+        1.1,
+        1.05,
+        0.95,
+        0.85,
+        0.85,
+        0.85,
+        0.9,
+        1.05,
+        1.1,
+        1.15
+      ],
+      "category_mult": {
+        "basics": 0.9,
+        "seasonal": 1.3,
+        "accessories": 1.1
+      },
+      "size_shift": [
+        0,
+        0.01,
+        0.01,
+        0,
+        -0.01,
+        -0.01
+      ],
+      "weekend_extra": 1.15
+    }
+  ],
+  "base_size_curve": {
+    "XS": 0.06,
+    "S": 0.17,
+    "M": 0.3,
+    "L": 0.27,
+    "XL": 0.14,
+    "XXL": 0.06
+  },
+  "kids_size_labels": [
+    "2-3Y",
+    "4-5Y",
+    "6-7Y",
+    "8-9Y",
+    "10-11Y",
+    "12-13Y"
+  ],
+  "demand_noise_gamma_shape": 4.0,
+  "suppliers": [
+    {
+      "supplier_id": "SUP-A",
+      "name": "Supplier A - Turkey (denim, knitwear)",
+      "lead_time_mean_days": 14,
+      "lead_time_sd_days": 2
+    },
+    {
+      "supplier_id": "SUP-B",
+      "name": "Supplier B - Bangladesh (jersey basics)",
+      "lead_time_mean_days": 28,
+      "lead_time_sd_days": 4
+    },
+    {
+      "supplier_id": "SUP-C",
+      "name": "Supplier C - China (accessories)",
+      "lead_time_mean_days": 21,
+      "lead_time_sd_days": 7
+    },
+    {
+      "supplier_id": "SUP-D",
+      "name": "Supplier D - India (linen, modest wear)",
+      "lead_time_mean_days": 18,
+      "lead_time_sd_days": 3
+    },
+    {
+      "supplier_id": "SUP-E",
+      "name": "Supplier E - GCC quick-response",
+      "lead_time_mean_days": 6,
+      "lead_time_sd_days": 1
+    }
+  ],
+  "seasons": {
+    "RAMADAN_EID": {
+      "name": "Ramadan & Eid capsule",
+      "start": "2026-02-01",
+      "end": "2026-04-10",
+      "peak_note": "last 10 nights of Ramadan"
+    },
+    "SUMMER": {
+      "name": "Summer",
+      "start": "2026-04-01",
+      "end": "2026-09-15",
+      "peak_note": "June-July"
+    },
+    "AW": {
+      "name": "Autumn/Winter (mild UAE winter)",
+      "start": "2026-10-01",
+      "end": "2027-01-31",
+      "peak_note": "December-January"
+    }
+  },
+  "costs": {
+    "annual_holding_rate": 0.25,
+    "transfer_fixed_aed": 60,
+    "transfer_per_unit_aed": 1.5,
+    "transfer_lead_time_days": 1,
+    "salvage_rate_of_cost": 0.3,
+    "promo_discount": 0.2,
+    "promo_lift": 1.4,
+    "markdown_price_elasticity": 1.8
+  },
+  "dc_dispatch_capacity_multiplier": 1.3,
+  "policy_fixed": {
+    "_about": "Benchmark rule: min/max set once from the annual plan (min 21 days, order 28 days), ignores lead time and seasonality, standard buying size ratio, no transfers, one late markdown.",
+    "min_days_of_plan": 21,
+    "order_qty_days_of_plan": 28,
+    "season_end_markdown": 0.4,
+    "season_end_markdown_days": 21
+  },
+  "policy_prioritised": {
+    "_about": "Proposed logic: basics use reorder point with lead-time-variability safety stock; seasonal uses sell-through vs plan with transfers and stepped markdowns.",
+    "review_day": "Mon",
+    "demand_window_days": 42,
+    "review_period_days": 14,
+    "service_level_by_abc": {
+      "A": 0.98,
+      "B": 0.95,
+      "C": 0.9
+    },
+    "transfer_donor_min_days_cover": 45,
+    "transfer_donor_keep_days_cover": 30,
+    "transfer_sell_probability": 0.8,
+    "seasonal_min_days_before_markdown": 28,
+    "seasonal_leftover_trigger": 0.35,
+    "markdown_steps": [
+      0.2,
+      0.35
+    ],
+    "markdown_step_gap_days": 14,
+    "final_clearance": 0.4,
+    "final_clearance_days": 10,
+    "seasonal_transfer_min_days_left": 21
+  },
+  "planted_issues": [
+    {
+      "id": "P1",
+      "what": "AUH-03 starts the year with 4x normal stock of the four crew-neck/V-neck basic T-shirts",
+      "expected_detection": "Excess-stock list and days of cover rank these at the top; transfer rule uses them as donors"
+    },
+    {
+      "id": "P2",
+      "what": "Summer season buy is 60% too high at AUH-02 and 40% too low at AUH-01",
+      "expected_detection": "Seasonal sell-through review flags AUH-02 surplus and AUH-01 deficit and transfers between them"
+    },
+    {
+      "id": "P3",
+      "what": "Supplier C (accessories) has highly variable lead times (sd 7 days on a 21-day mean)",
+      "expected_detection": "Lead-time analysis shows the highest variability; safety stock for SUP-C items is driven by the d^2 * sigma_L^2 term"
+    },
+    {
+      "id": "P4",
+      "what": "Jersey basics come from Supplier B with a 28-day lead time, longer than the benchmark rule's 21-day trigger",
+      "expected_detection": "Benchmark policy stocks out repeatedly on SUP-B items; censored-demand analysis shows sales under-state demand for them"
+    },
+    {
+      "id": "P5",
+      "what": "Initial basics stock is split evenly across sizes, ignoring the size curve",
+      "expected_detection": "Broken size runs (M/L out while XS/XXL remain) in the first weeks; size-curve allocation corrects it"
+    }
+  ]
+}

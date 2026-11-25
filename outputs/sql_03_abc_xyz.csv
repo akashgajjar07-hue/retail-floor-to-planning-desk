@@ -1,0 +1,157 @@
+store_id,sku_id,name,category,store_sales_value_aed,chain_sales_value_aed,chain_cum_share,abc,weekly_cv,xyz
+AUH-01,B11,Slim Jeans Indigo,basics,140686.0,399052.0,0.083,A,0.448,X
+AUH-02,B11,Slim Jeans Indigo,basics,119468.0,399052.0,0.083,A,0.367,X
+AUH-03,B11,Slim Jeans Indigo,basics,63951.0,399052.0,0.083,A,0.538,Y
+AUH-04,B11,Slim Jeans Indigo,basics,74947.0,399052.0,0.083,A,0.357,X
+AUH-01,B12,Straight Jeans Black,basics,100098.0,285842.0,0.1424,A,0.488,X
+AUH-02,B12,Straight Jeans Black,basics,90592.0,285842.0,0.1424,A,0.378,X
+AUH-03,B12,Straight Jeans Black,basics,44491.0,285842.0,0.1424,A,0.511,Y
+AUH-04,B12,Straight Jeans Black,basics,50660.0,285842.0,0.1424,A,0.599,Y
+AUH-01,B13,Chinos Beige,basics,86941.0,249424.0,0.1942,A,0.481,X
+AUH-02,B13,Chinos Beige,basics,74161.0,249424.0,0.1942,A,0.405,X
+AUH-03,B13,Chinos Beige,basics,41103.0,249424.0,0.1942,A,0.559,Y
+AUH-04,B13,Chinos Beige,basics,47219.0,249424.0,0.1942,A,0.53,Y
+AUH-01,B09,Oxford Shirt White,basics,81750.0,235244.0,0.2431,A,0.437,X
+AUH-02,B09,Oxford Shirt White,basics,69062.0,235244.0,0.2431,A,0.349,X
+AUH-03,B09,Oxford Shirt White,basics,38608.0,235244.0,0.2431,A,0.484,X
+AUH-04,B09,Oxford Shirt White,basics,45824.0,235244.0,0.2431,A,0.458,X
+AUH-01,B01,Crew-neck T-shirt White,basics,81487.0,214211.0,0.2877,A,0.514,Y
+AUH-02,B01,Crew-neck T-shirt White,basics,63905.0,214211.0,0.2877,A,0.481,X
+AUH-03,B01,Crew-neck T-shirt White,basics,28041.0,214211.0,0.2877,A,0.667,Y
+AUH-04,B01,Crew-neck T-shirt White,basics,40778.0,214211.0,0.2877,A,0.536,Y
+AUH-01,B19,Long-sleeve Modest Tunic Black,basics,74824.0,201465.0,0.3295,A,0.489,X
+AUH-02,B19,Long-sleeve Modest Tunic Black,basics,59618.0,201465.0,0.3295,A,0.424,X
+AUH-03,B19,Long-sleeve Modest Tunic Black,basics,30116.0,201465.0,0.3295,A,0.542,Y
+AUH-04,B19,Long-sleeve Modest Tunic Black,basics,36907.0,201465.0,0.3295,A,0.517,Y
+AUH-01,B10,Oxford Shirt Blue,basics,73619.0,199274.0,0.371,A,0.458,X
+AUH-02,B10,Oxford Shirt Blue,basics,55808.0,199274.0,0.371,A,0.436,X
+AUH-03,B10,Oxford Shirt Blue,basics,31566.0,199274.0,0.371,A,0.445,X
+AUH-04,B10,Oxford Shirt Blue,basics,38281.0,199274.0,0.371,A,0.4,X
+AUH-01,B02,Crew-neck T-shirt Black,basics,71354.0,192114.0,0.4109,A,0.369,X
+AUH-02,B02,Crew-neck T-shirt Black,basics,56761.0,192114.0,0.4109,A,0.466,X
+AUH-03,B02,Crew-neck T-shirt Black,basics,25654.0,192114.0,0.4109,A,0.742,Y
+AUH-04,B02,Crew-neck T-shirt Black,basics,38345.0,192114.0,0.4109,A,0.482,X
+AUH-01,B14,Chinos Navy,basics,61190.0,174668.0,0.4472,A,0.511,Y
+AUH-02,B14,Chinos Navy,basics,52860.0,174668.0,0.4472,A,0.462,X
+AUH-03,B14,Chinos Navy,basics,30750.0,174668.0,0.4472,A,0.505,Y
+AUH-04,B14,Chinos Navy,basics,29869.0,174668.0,0.4472,A,0.548,Y
+AUH-01,B07,Pique Polo White,basics,60996.0,167380.0,0.482,A,0.568,Y
+AUH-02,B07,Pique Polo White,basics,47969.0,167380.0,0.482,A,0.498,X
+AUH-03,B07,Pique Polo White,basics,25958.0,167380.0,0.482,A,0.533,Y
+AUH-04,B07,Pique Polo White,basics,32458.0,167380.0,0.482,A,0.44,X
+AUH-01,B08,Pique Polo Navy,basics,57394.0,152145.0,0.5136,A,0.414,X
+AUH-02,B08,Pique Polo Navy,basics,42283.0,152145.0,0.5136,A,0.443,X
+AUH-03,B08,Pique Polo Navy,basics,24716.0,152145.0,0.5136,A,0.525,Y
+AUH-04,B08,Pique Polo Navy,basics,27752.0,152145.0,0.5136,A,0.585,Y
+AUH-01,B15,Jogger Grey,basics,57280.0,148149.0,0.5444,A,0.435,X
+AUH-02,B15,Jogger Grey,basics,43752.0,148149.0,0.5444,A,0.499,X
+AUH-03,B15,Jogger Grey,basics,19082.0,148149.0,0.5444,A,0.529,Y
+AUH-04,B15,Jogger Grey,basics,28035.0,148149.0,0.5444,A,0.527,Y
+AUH-01,B16,Zip Hoodie Black,basics,48839.0,135760.0,0.5727,A,0.663,Y
+AUH-02,B16,Zip Hoodie Black,basics,40506.0,135760.0,0.5727,A,0.565,Y
+AUH-03,B16,Zip Hoodie Black,basics,21414.0,135760.0,0.5727,A,0.576,Y
+AUH-04,B16,Zip Hoodie Black,basics,25000.0,135760.0,0.5727,A,0.708,Y
+AUH-01,B03,Crew-neck T-shirt Navy,basics,48407.0,130720.0,0.5998,A,0.555,Y
+AUH-02,B03,Crew-neck T-shirt Navy,basics,37034.0,130720.0,0.5998,A,0.591,Y
+AUH-03,B03,Crew-neck T-shirt Navy,basics,21832.0,130720.0,0.5998,A,0.507,Y
+AUH-04,B03,Crew-neck T-shirt Navy,basics,23447.0,130720.0,0.5998,A,0.556,Y
+AUH-01,B05,Crew-neck T-shirt Grey Marl,basics,48898.0,130049.0,0.6269,A,0.521,Y
+AUH-02,B05,Crew-neck T-shirt Grey Marl,basics,37580.0,130049.0,0.6269,A,0.563,Y
+AUH-03,B05,Crew-neck T-shirt Grey Marl,basics,17386.0,130049.0,0.6269,A,0.887,Y
+AUH-04,B05,Crew-neck T-shirt Grey Marl,basics,26185.0,130049.0,0.6269,A,0.499,X
+AUH-01,B20,Long-sleeve Modest Tunic Navy,basics,42035.0,114246.0,0.6506,A,0.642,Y
+AUH-02,B20,Long-sleeve Modest Tunic Navy,basics,33581.0,114246.0,0.6506,A,0.515,Y
+AUH-03,B20,Long-sleeve Modest Tunic Navy,basics,15781.0,114246.0,0.6506,A,0.655,Y
+AUH-04,B20,Long-sleeve Modest Tunic Navy,basics,22849.0,114246.0,0.6506,A,0.647,Y
+AUH-01,B17,Leggings Black,basics,41406.0,112065.0,0.6739,A,0.607,Y
+AUH-02,B17,Leggings Black,basics,31022.0,112065.0,0.6739,A,0.508,Y
+AUH-03,B17,Leggings Black,basics,18538.0,112065.0,0.6739,A,0.627,Y
+AUH-04,B17,Leggings Black,basics,21098.0,112065.0,0.6739,A,0.458,X
+AUH-01,B25,Ankle Socks 3-pack,basics,41440.0,110120.0,0.6968,A,0.302,X
+AUH-02,B25,Ankle Socks 3-pack,basics,30685.0,110120.0,0.6968,A,0.356,X
+AUH-03,B25,Ankle Socks 3-pack,basics,17875.0,110120.0,0.6968,A,0.369,X
+AUH-04,B25,Ankle Socks 3-pack,basics,20120.0,110120.0,0.6968,A,0.405,X
+AUH-01,A09,Sunglasses Classic,accessories,48143.0,101641.0,0.7179,A,0.476,X
+AUH-02,A09,Sunglasses Classic,accessories,19102.0,101641.0,0.7179,A,0.568,Y
+AUH-03,A09,Sunglasses Classic,accessories,12482.0,101641.0,0.7179,A,0.629,Y
+AUH-04,A09,Sunglasses Classic,accessories,21915.0,101641.0,0.7179,A,0.666,Y
+AUH-01,B06,Oversized T-shirt Sand,basics,36770.0,99254.0,0.7386,A,0.59,Y
+AUH-02,B06,Oversized T-shirt Sand,basics,30302.0,99254.0,0.7386,A,0.496,X
+AUH-03,B06,Oversized T-shirt Sand,basics,14563.0,99254.0,0.7386,A,0.671,Y
+AUH-04,B06,Oversized T-shirt Sand,basics,17620.0,99254.0,0.7386,A,0.664,Y
+AUH-01,B24,Lightweight Cardigan Beige,basics,32571.0,93575.0,0.758,A,0.437,X
+AUH-02,B24,Lightweight Cardigan Beige,basics,27027.0,93575.0,0.758,A,0.571,Y
+AUH-03,B24,Lightweight Cardigan Beige,basics,15107.0,93575.0,0.758,A,0.569,Y
+AUH-04,B24,Lightweight Cardigan Beige,basics,18869.0,93575.0,0.758,A,0.815,Y
+AUH-01,B26,Crew Socks 3-pack,basics,31703.0,87742.0,0.7763,A,0.406,X
+AUH-02,B26,Crew Socks 3-pack,basics,25694.0,87742.0,0.7763,A,0.273,X
+AUH-03,B26,Crew Socks 3-pack,basics,14372.0,87742.0,0.7763,A,0.388,X
+AUH-04,B26,Crew Socks 3-pack,basics,15973.0,87742.0,0.7763,A,0.34,X
+AUH-01,A06,Everyday Scarf Black,accessories,42189.0,85417.0,0.794,A,0.336,X
+AUH-02,A06,Everyday Scarf Black,accessories,15219.0,85417.0,0.794,A,0.446,X
+AUH-03,A06,Everyday Scarf Black,accessories,10006.0,85417.0,0.794,A,0.539,Y
+AUH-04,A06,Everyday Scarf Black,accessories,18003.0,85417.0,0.794,A,0.373,X
+AUH-01,B04,V-neck T-shirt White,basics,30475.0,82883.0,0.8112,A,0.522,Y
+AUH-02,B04,V-neck T-shirt White,basics,25490.0,82883.0,0.8112,A,0.602,Y
+AUH-03,B04,V-neck T-shirt White,basics,10873.0,82883.0,0.8112,A,0.744,Y
+AUH-04,B04,V-neck T-shirt White,basics,16045.0,82883.0,0.8112,A,0.64,Y
+AUH-01,A01,Baseball Cap Black,accessories,37674.0,80808.0,0.828,B,0.415,X
+AUH-02,A01,Baseball Cap Black,accessories,14009.0,80808.0,0.828,B,0.632,Y
+AUH-03,A01,Baseball Cap Black,accessories,10756.0,80808.0,0.828,B,0.495,X
+AUH-04,A01,Baseball Cap Black,accessories,18369.0,80808.0,0.828,B,0.41,X
+AUH-01,A08,Crossbody Bag Black,accessories,39778.0,79576.0,0.8446,B,0.494,X
+AUH-02,A08,Crossbody Bag Black,accessories,13167.0,79576.0,0.8446,B,0.637,Y
+AUH-03,A08,Crossbody Bag Black,accessories,9425.0,79576.0,0.8446,B,0.762,Y
+AUH-04,A08,Crossbody Bag Black,accessories,17206.0,79576.0,0.8446,B,0.727,Y
+AUH-01,A03,Canvas Tote Bag,accessories,34686.0,73818.0,0.8599,B,0.451,X
+AUH-02,A03,Canvas Tote Bag,accessories,12924.0,73818.0,0.8599,B,0.566,Y
+AUH-03,A03,Canvas Tote Bag,accessories,9198.0,73818.0,0.8599,B,0.575,Y
+AUH-04,A03,Canvas Tote Bag,accessories,17010.0,73818.0,0.8599,B,0.457,X
+AUH-01,A10,Sunglasses Round,accessories,34586.0,72506.0,0.875,B,0.618,Y
+AUH-02,A10,Sunglasses Round,accessories,13288.0,72506.0,0.875,B,0.703,Y
+AUH-03,A10,Sunglasses Round,accessories,9843.0,72506.0,0.875,B,0.915,Y
+AUH-04,A10,Sunglasses Round,accessories,14789.0,72506.0,0.875,B,0.561,Y
+AUH-01,B21,Cotton Pyjama Set Grey,basics,28676.0,72054.0,0.89,B,0.477,X
+AUH-02,B21,Cotton Pyjama Set Grey,basics,19349.0,72054.0,0.89,B,0.645,Y
+AUH-03,B21,Cotton Pyjama Set Grey,basics,10538.0,72054.0,0.89,B,0.735,Y
+AUH-04,B21,Cotton Pyjama Set Grey,basics,13492.0,72054.0,0.89,B,0.687,Y
+AUH-01,A05,Leather Belt Black,accessories,36128.0,71995.0,0.9049,B,0.522,Y
+AUH-02,A05,Leather Belt Black,accessories,11896.0,71995.0,0.9049,B,0.663,Y
+AUH-03,A05,Leather Belt Black,accessories,8722.0,71995.0,0.9049,B,0.773,Y
+AUH-04,A05,Leather Belt Black,accessories,15249.0,71995.0,0.9049,B,0.38,X
+AUH-01,B22,Dry-fit Sports T-shirt Black,basics,25542.0,69949.0,0.9195,B,0.532,Y
+AUH-02,B22,Dry-fit Sports T-shirt Black,basics,20218.0,69949.0,0.9195,B,0.538,Y
+AUH-03,B22,Dry-fit Sports T-shirt Black,basics,11594.0,69949.0,0.9195,B,0.643,Y
+AUH-04,B22,Dry-fit Sports T-shirt Black,basics,12595.0,69949.0,0.9195,B,0.583,Y
+AUH-01,A07,Everyday Scarf Beige,accessories,31625.0,65062.0,0.933,B,0.508,Y
+AUH-02,A07,Everyday Scarf Beige,accessories,11760.0,65062.0,0.933,B,0.518,Y
+AUH-03,A07,Everyday Scarf Beige,accessories,7193.0,65062.0,0.933,B,0.46,X
+AUH-04,A07,Everyday Scarf Beige,accessories,14484.0,65062.0,0.933,B,0.465,X
+AUH-01,B27,No-show Socks 3-pack,basics,19975.0,54120.0,0.9443,B,0.339,X
+AUH-02,B27,No-show Socks 3-pack,basics,15725.0,54120.0,0.9443,B,0.386,X
+AUH-03,B27,No-show Socks 3-pack,basics,9070.0,54120.0,0.9443,B,0.496,X
+AUH-04,B27,No-show Socks 3-pack,basics,9350.0,54120.0,0.9443,B,0.347,X
+AUH-01,B23,Sports Shorts Black,basics,19649.0,52900.0,0.9553,B,0.565,Y
+AUH-02,B23,Sports Shorts Black,basics,15337.0,52900.0,0.9553,B,0.611,Y
+AUH-03,B23,Sports Shorts Black,basics,8340.0,52900.0,0.9553,B,0.45,X
+AUH-04,B23,Sports Shorts Black,basics,9575.0,52900.0,0.9553,B,0.68,Y
+AUH-01,A04,Leather Belt Brown,accessories,24219.0,51929.0,0.9661,C,0.583,Y
+AUH-02,A04,Leather Belt Brown,accessories,9260.0,51929.0,0.9661,C,0.656,Y
+AUH-03,A04,Leather Belt Brown,accessories,7328.0,51929.0,0.9661,C,0.569,Y
+AUH-04,A04,Leather Belt Brown,accessories,11123.0,51929.0,0.9661,C,0.541,Y
+AUH-01,A02,Baseball Cap Beige,accessories,24094.0,51722.0,0.9768,C,0.5,X
+AUH-02,A02,Baseball Cap Beige,accessories,10000.0,51722.0,0.9768,C,0.822,Y
+AUH-03,A02,Baseball Cap Beige,accessories,6482.0,51722.0,0.9768,C,0.612,Y
+AUH-04,A02,Baseball Cap Beige,accessories,11146.0,51722.0,0.9768,C,0.494,X
+AUH-01,B18,Ribbed Tank White,basics,19639.0,51098.0,0.9874,C,0.476,X
+AUH-02,B18,Ribbed Tank White,basics,14181.0,51098.0,0.9874,C,0.503,Y
+AUH-03,B18,Ribbed Tank White,basics,7743.0,51098.0,0.9874,C,0.575,Y
+AUH-04,B18,Ribbed Tank White,basics,9535.0,51098.0,0.9874,C,0.693,Y
+AUH-01,A11,Phone Crossbody Pouch,accessories,19045.0,40863.0,0.9959,C,0.563,Y
+AUH-02,A11,Phone Crossbody Pouch,accessories,6490.0,40863.0,0.9959,C,0.61,Y
+AUH-03,A11,Phone Crossbody Pouch,accessories,5487.0,40863.0,0.9959,C,0.696,Y
+AUH-04,A11,Phone Crossbody Pouch,accessories,9841.0,40863.0,0.9959,C,0.596,Y
+AUH-01,A12,Hair Clip Set,accessories,9363.0,19612.0,1.0,C,0.553,Y
+AUH-02,A12,Hair Clip Set,accessories,3754.0,19612.0,1.0,C,0.584,Y
+AUH-03,A12,Hair Clip Set,accessories,2428.0,19612.0,1.0,C,0.77,Y
+AUH-04,A12,Hair Clip Set,accessories,4066.0,19612.0,1.0,C,0.556,Y

@@ -1,0 +1,71 @@
+sku_id,name,category,subcategory,season,replenishment,sized,kids,supplier_id,unit_cost,price
+B01,Crew-neck T-shirt White,basics,tops,,continuous,Y,N,SUP-B,12,39
+B02,Crew-neck T-shirt Black,basics,tops,,continuous,Y,N,SUP-B,12,39
+B03,Crew-neck T-shirt Navy,basics,tops,,continuous,Y,N,SUP-B,12,39
+B04,V-neck T-shirt White,basics,tops,,continuous,Y,N,SUP-B,12,39
+B05,Crew-neck T-shirt Grey Marl,basics,tops,,continuous,Y,N,SUP-B,12,39
+B06,Oversized T-shirt Sand,basics,tops,,continuous,Y,N,SUP-B,15,49
+B07,Pique Polo White,basics,tops,,continuous,Y,N,SUP-B,22,69
+B08,Pique Polo Navy,basics,tops,,continuous,Y,N,SUP-B,22,69
+B09,Oxford Shirt White,basics,shirts,,continuous,Y,N,SUP-A,35,109
+B10,Oxford Shirt Blue,basics,shirts,,continuous,Y,N,SUP-A,35,109
+B11,Slim Jeans Indigo,basics,bottoms,,continuous,Y,N,SUP-A,45,149
+B12,Straight Jeans Black,basics,bottoms,,continuous,Y,N,SUP-A,45,149
+B13,Chinos Beige,basics,bottoms,,continuous,Y,N,SUP-A,38,119
+B14,Chinos Navy,basics,bottoms,,continuous,Y,N,SUP-A,38,119
+B15,Jogger Grey,basics,bottoms,,continuous,Y,N,SUP-A,28,89
+B16,Zip Hoodie Black,basics,tops,,continuous,Y,N,SUP-A,40,129
+B17,Leggings Black,basics,bottoms,,continuous,Y,N,SUP-B,18,59
+B18,Ribbed Tank White,basics,tops,,continuous,Y,N,SUP-B,10,29
+B19,Long-sleeve Modest Tunic Black,basics,tops,,continuous,Y,N,SUP-D,30,99
+B20,Long-sleeve Modest Tunic Navy,basics,tops,,continuous,Y,N,SUP-D,30,99
+B21,Cotton Pyjama Set Grey,basics,loungewear,,continuous,Y,N,SUP-B,28,89
+B22,Dry-fit Sports T-shirt Black,basics,sport,,continuous,Y,N,SUP-B,16,55
+B23,Sports Shorts Black,basics,sport,,continuous,Y,N,SUP-B,15,49
+B24,Lightweight Cardigan Beige,basics,tops,,continuous,Y,N,SUP-A,32,99
+B25,Ankle Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,8,25
+B26,Crew Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,9,29
+B27,No-show Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,8,25
+R01,Embroidered Maxi Dress Ivory,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,85,279
+R02,Maxi Dress Emerald,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,75,249
+R03,Linen Long Shirt White,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,45,149
+R04,Linen Long Shirt Sage,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,45,149
+R05,Occasion Open Kimono Black,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,60,199
+R06,Kids Eid Dress Gold,seasonal,kids,RAMADAN_EID,one_time,Y,Y,SUP-D,40,129
+R07,Kids Linen Set White,seasonal,kids,RAMADAN_EID,one_time,Y,Y,SUP-D,35,119
+S01,Linen Shirt White,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,40,129
+S02,Linen Shirt Sky,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,40,129
+S03,Linen Trousers Sand,seasonal,bottoms,SUMMER,one_time,Y,N,SUP-D,45,149
+S04,Swim Shorts Navy,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,25,79
+S05,Swim Shorts Palm Print,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,25,79
+S06,Swimsuit Black,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,35,119
+S07,Cotton Shorts Khaki,seasonal,bottoms,SUMMER,one_time,Y,N,SUP-B,20,69
+S08,Sleeveless Dress Floral,seasonal,dresses,SUMMER,one_time,Y,N,SUP-D,38,129
+S09,Resort Shirt Print,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,32,99
+S10,UV Rash Guard,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,28,89
+W01,Light Puffer Jacket Black,seasonal,outerwear,AW,one_time,Y,N,SUP-C,80,249
+W02,Light Puffer Jacket Olive,seasonal,outerwear,AW,one_time,Y,N,SUP-C,80,249
+W03,Merino Crew Knit Navy,seasonal,knitwear,AW,one_time,Y,N,SUP-A,55,179
+W04,Merino Crew Knit Camel,seasonal,knitwear,AW,one_time,Y,N,SUP-A,55,179
+W05,Denim Jacket,seasonal,outerwear,AW,one_time,Y,N,SUP-A,60,189
+W06,Fleece Zip Jacket Grey,seasonal,outerwear,AW,one_time,Y,N,SUP-C,35,119
+W07,Wool-blend Overshirt Check,seasonal,shirts,AW,one_time,Y,N,SUP-A,50,159
+W08,Knit Dress Charcoal,seasonal,dresses,AW,one_time,Y,N,SUP-A,48,159
+A01,Baseball Cap Black,accessories,headwear,,continuous,N,N,SUP-C,10,39
+A02,Baseball Cap Beige,accessories,headwear,,continuous,N,N,SUP-C,10,39
+A03,Canvas Tote Bag,accessories,bags,,continuous,N,N,SUP-C,12,45
+A04,Leather Belt Brown,accessories,belts,,continuous,N,N,SUP-C,18,69
+A05,Leather Belt Black,accessories,belts,,continuous,N,N,SUP-C,18,69
+A06,Everyday Scarf Black,accessories,scarves,,continuous,N,N,SUP-D,14,49
+A07,Everyday Scarf Beige,accessories,scarves,,continuous,N,N,SUP-D,14,49
+A08,Crossbody Bag Black,accessories,bags,,continuous,N,N,SUP-C,30,99
+A09,Sunglasses Classic,accessories,eyewear,,continuous,N,N,SUP-C,20,79
+A10,Sunglasses Round,accessories,eyewear,,continuous,N,N,SUP-C,20,79
+A11,Phone Crossbody Pouch,accessories,bags,,continuous,N,N,SUP-C,15,59
+A12,Hair Clip Set,accessories,hair,,continuous,N,N,SUP-C,5,19
+A13,Straw Sun Hat,accessories,headwear,SUMMER,one_time,N,N,SUP-C,15,59
+A14,Beach Towel Stripe,accessories,beach,SUMMER,one_time,N,N,SUP-C,18,69
+A15,Ribbed Beanie Grey,accessories,headwear,AW,one_time,N,N,SUP-C,8,35
+A16,Soft-knit Wrap Camel,accessories,scarves,AW,one_time,N,N,SUP-D,25,89
+A17,Eid Gift Set,accessories,gifting,RAMADAN_EID,one_time,N,N,SUP-D,30,99
+A18,Embellished Clutch,accessories,bags,RAMADAN_EID,one_time,N,N,SUP-C,28,99

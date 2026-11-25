@@ -1,0 +1,5 @@
+store_id,name,sales_value_aed,sales_units,basics_instock_rate,inventory_value_aed,transfer_in_units,transfer_out_units,season_end_clearance_units
+AUH-01,Flagship - tourist-heavy mall,2471784.0,35524.0,0.836,81480.0,0.0,0.0,85.0
+AUH-02,Residential community mall - families,1714012.0,24485.0,0.8377,39715.0,0.0,0.0,1404.0
+AUH-03,Neighbourhood store - compact,932145.0,13257.0,0.7961,28846.0,0.0,0.0,181.0
+AUH-04,Waterfront lifestyle store - weekend leisure,1399838.0,18967.0,0.8157,43246.0,0.0,0.0,263.0

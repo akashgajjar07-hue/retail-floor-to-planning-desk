@@ -1,0 +1,6 @@
+supplier_id,name,quoted_lead_time_days,quoted_lead_time_sd_days
+SUP-A,"Supplier A - Turkey (denim, knitwear)",14,2
+SUP-B,Supplier B - Bangladesh (jersey basics),28,4
+SUP-C,Supplier C - China (accessories),21,7
+SUP-D,"Supplier D - India (linen, modest wear)",18,3
+SUP-E,Supplier E - GCC quick-response,6,1

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Floor to Planning Desk - Inventory Planning Dashboard</title>
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --ink:#191919; --ink2:#5f5f5f; --ink3:#8a8a8a; --line:#e4e4e0;
+  --s1:#257de0; --s2:#f47230; --s3:#00b894; --s1soft:#cce3fd;
+  --good:#0a7d32; --warn:#b26a00; --bad:#c62828; --chip:#f0f0ec;
+  --seq0:#eef5fe; --seq1:#9dc8f7; --seq2:#338ced; --seq3:#1757ac;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121212; --surface:#1c1c1c; --ink:#efefef; --ink2:#a8a8a8; --ink3:#7a7a7a; --line:#303030;
+    --s1:#338ced; --s2:#e76624; --s3:#00a888; --s1soft:#1b3a5e; --chip:#262626;
+    --good:#3cbf63; --warn:#e0a030; --bad:#ef6b6b; --seq0:#1a2533; --seq1:#1b4f8f; --seq2:#338ced; --seq3:#9dc8f7; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+header{padding:28px 24px 0;max-width:1240px;margin:0 auto}
+.kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+h1{font-size:26px;margin:4px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--ink2);max-width:860px;margin:0}
+.banner{margin:14px 0 0;padding:10px 14px;border:1px solid var(--line);border-left:3px solid var(--s2);background:var(--surface);border-radius:6px;color:var(--ink2);font-size:13px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:18px}
+nav .in{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+nav button{background:none;border:0;padding:12px 14px;font:inherit;color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--s1);font-weight:600}
+main{max-width:1240px;margin:0 auto;padding:20px 24px 60px}
+section.page{display:none} section.page.on{display:block}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+@media (max-width:520px){.g2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card h3{margin:0 0 2px;font-size:15px}
+.card .note{color:var(--ink2);font-size:12.5px;margin:0 0 10px}
+.tile .lab{color:var(--ink2);font-size:12.5px}
+.tile .val{font-size:28px;font-weight:650;letter-spacing:-.01em;margin:2px 0}
+.tile .ctx{color:var(--ink3);font-size:12px}
+h2{font-size:18px;margin:26px 0 4px} h2:first-child{margin-top:4px}
+.lead{color:var(--ink2);margin:0 0 14px;max-width:900px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--ink2);font-weight:600;border-bottom:1px solid var(--line);padding:7px 8px;white-space:nowrap}
+td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11.5px;font-weight:600;background:var(--chip);color:var(--ink2);white-space:nowrap}
+.pill.order,.pill.recv{color:var(--s1)} .pill.send{color:var(--s3)} .pill.md{color:var(--warn)} .pill.found{color:var(--good)} .pill.part{color:var(--warn)}
+svg text{fill:var(--ink2);font-size:11px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:0 0 6px}
+.legend i{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.legend i.sq{height:12px;width:12px;border-radius:3px}
+#tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:0 4px 18px rgba(0,0,0,.12);border-radius:8px;padding:8px 10px;font-size:12.5px;display:none;z-index:20;max-width:280px}
+#tip b{font-weight:600}
+.ctrl{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+.ctrl label{display:flex;flex-direction:column;font-size:12px;color:var(--ink2);gap:4px}
+select,input[type=number]{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+input[type=range]{width:180px}
+.delta{font-size:12.5px;font-weight:600} .delta.up{color:var(--good)} .delta.dn{color:var(--bad)}
+.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--chip);padding:10px 12px;border-radius:6px;line-height:1.7;overflow-x:auto}
+.heat td{text-align:center;font-variant-numeric:tabular-nums;border:2px solid var(--surface);border-radius:4px}
+.matrix td{text-align:center;padding:10px;border:2px solid var(--surface)}
+ul.tight{margin:6px 0;padding-left:18px} ul.tight li{margin:3px 0}
+.foot{color:var(--ink3);font-size:12px;margin-top:30px}
+a{color:var(--s1)}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Inventory planning case study · Synthetic data</div>
+  <h1>Retail Floor → Planning Desk</h1>
+  <p class="sub">A replenishment, transfer and markdown model for a hypothetical four-store fashion retailer in Abu Dhabi. Basics are planned with reorder points; seasonal lines with sell-through, transfers and markdowns.</p>
+  <div class="banner" id="banner"></div>
+</header>
+<nav><div class="in" role="tablist" id="tabs">
+  <button role="tab" data-p="p1" aria-selected="true">01 Inventory health</button>
+  <button role="tab" data-p="p2">02 Category &amp; store</button>
+  <button role="tab" data-p="p3">03 Replenishment actions</button>
+  <button role="tab" data-p="p4">04 What-if simulator</button>
+  <button role="tab" data-p="p5">Method &amp; honesty</button>
+</div></nav>
+<main>
+
+<!-- ===================== PAGE 1 ===================== -->
+<section class="page on" id="p1">
+  <h2>Where the chain stands</h2>
+  <p class="lead" id="p1lead"></p>
+  <div class="grid g4" id="kpis"></div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card" id="c-instock"><h3>In-stock rate, replenished items</h3><p class="note">Share of size-store-days ending with stock. Weekly.</p><div class="chart" data-h="230"></div></div>
+    <div class="card" id="c-invval"><h3>Inventory value at cost</h3><p class="note">All items, end of each week (AED). Seasonal buys land at the start of each season.</p><div class="chart" data-h="230"></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Inventory by category</h3><p class="note">Days of cover = units on hand ÷ average daily sales over the last 28 days. Excess = more than 90 days of cover, or stock with no sales.</p><div class="scroll"><table id="t-health"></table></div></div>
+</section>
+
+<!-- ===================== PAGE 2 ===================== -->
+<section class="page" id="p2">
+  <h2>What sells, how steadily, and where</h2>
+  <p class="lead">ABC ranks replenished SKUs by sales value; XYZ by how much weekly sales swing. Together they decide how much safety stock each line deserves.</p>
+  <div class="grid g2">
+    <div class="card"><h3>ABC × XYZ matrix</h3><p class="note">Store-SKU lines. ABC from chain sales value per SKU; XYZ from each store's weekly sales.</p><div id="matrix"></div></div>
+    <div class="card"><h3>Size availability, sized basics</h3><p class="note">Share of days in the last 28 that ended with the size in stock.</p><div id="heat"></div></div>
+  </div>
+  <div class="card" style="margin-top:16px" id="c-broken"><h3>Broken size runs</h3><p class="note">Share of style-store-days where M or L was out while the style still had other sizes on the rail. Benchmark history, weekly.</p><div class="legend" id="lg-broken"></div><div class="chart" data-h="220"></div></div>
+  <h2>Sales are not demand</h2>
+  <p class="lead">When a size sells out, the sales record stops at the stock level. A forecast built on raw sales therefore learns that the item sells less than it does, orders less, and stocks out again.</p>
+  <div class="grid g2">
+    <div class="card" id="c-cens"><h3>Forecast error vs true demand</h3><p class="note">Replenished style-stores grouped by how often their sizes were out of stock.</p><div class="legend"><span><i class="sq" style="background:var(--s2)"></i>Average of all sales days</span><span><i class="sq" style="background:var(--s1)"></i>Average of in-stock days only</span></div><div class="chart" data-h="240"></div></div>
+    <div class="card" id="c-censex"><h3 id="censex-t"></h3><p class="note" id="censex-n"></p><div class="legend"><span><i style="background:var(--ink3)"></i>True demand</span><span><i style="background:var(--s1)"></i>Observed sales</span></div><div class="chart" data-h="240"></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Store scorecard, year to date</h3><div class="scroll"><table id="t-stores"></table></div></div>
+</section>
+
+<!-- ===================== PAGE 3 ===================== -->
+<section class="page" id="p3">
+  <h2>What to do on <span class="asof"></span></h2>
+  <p class="lead">Built only from observed data (sales, stock, open orders) and the planning calendar. Every quantity comes from the reorder-point formula, not from judgement or AI.</p>
+  <div class="card"><h3>Replenishment orders, ranked by priority</h3>
+    <p class="note">Priority = expected shortfall before the order could land × unit margin. When the distribution centre can only ship <span id="cap"></span> units a day, the top of this list goes first. Showing the top 40 of <span id="ordn"></span>.</p>
+    <div class="ctrl"><label>Store<select id="f-store"><option value="">All stores</option></select></label><label>Supplier<select id="f-sup"><option value="">All suppliers</option></select></label></div>
+    <div class="scroll"><table id="t-orders"></table></div></div>
+  <div class="card" style="margin-top:16px"><h3>Autumn/Winter season: transfer, markdown or hold</h3>
+    <p class="note">Seasonal lines are never reordered. Projected leftover = stock on hand − forecast demand to season end (31 Jan). Receive transfer: short by more than 20% of remaining demand. Send: long by more than 25% while another store is short.</p>
+    <div class="scroll"><table id="t-seas"></table></div></div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><h3>Basics transfer candidates</h3><p class="note">Rule: receiver will run out before a new order could arrive; donor has more than 45 days of cover and keeps 30; expected margin saved (80% sell probability) beats AED 60 + 1.5 per unit.</p><div id="t-btr"></div></div>
+    <div class="card"><h3>Supplier lead times</h3><p class="note">Received purchase orders, Jan-Nov. Variability feeds the safety stock directly.</p><div class="scroll"><table id="t-sup"></table></div></div>
+  </div>
+</section>
+
+<!-- ===================== PAGE 4 ===================== -->
+<section class="page" id="p4">
+  <h2>What if?</h2>
+  <p class="lead">Each combination below is a full-year simulation of both policies on identical demand. Supplier delays hit Supplier B (jersey basics) from 1 June, and nobody is warned; the demand shock also starts 1 June and is not in the plan.</p>
+  <div class="card">
+    <div class="ctrl">
+      <label>Service level (proposed policy)<select id="w-sl"></select></label>
+      <label>Supplier B delay<select id="w-delay"><option value="0">None</option><option value="7">+7 days</option><option value="14">+14 days</option></select></label>
+      <label>Demand vs plan<select id="w-shock"><option value="1">As planned</option><option value="0.8">−20%</option><option value="1.2">+20%</option></select></label>
+    </div>
+    <div class="grid g4" id="w-out"></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card" id="c-sl"><h3>Service level vs inventory</h3><p class="note">Proposed policy at single service levels for every replenished line, under the scenario selected above.</p><div class="legend"><span><i style="background:var(--s1)"></i>Proposed</span><span><i class="sq" style="background:var(--s2)"></i>Benchmark</span></div><div class="chart" data-h="250"></div></div>
+    <div class="card"><h3>Reorder-point calculator</h3><p class="note">The same formula the model uses. Pre-filled with Crew-neck T-shirt White at AUH-01 on the snapshot date.</p>
+      <div class="ctrl" id="calc"></div><div class="formula" id="calc-out"></div></div>
+  </div>
+  <h2>Benchmark vs proposed policy, base scenario</h2>
+  <p class="lead" id="p4lead"></p>
+  <div class="card"><div class="scroll"><table id="t-comp"></table></div></div>
+</section>
+
+<!-- ===================== PAGE 5 ===================== -->
+<section class="page" id="p5">
+  <h2>Method, and what this does not prove</h2>
+  <p class="lead">The data is synthetic, and I planted the problems in it myself. So the real question is not "what did I discover?" but "does the method find the planted problems, and rank them correctly?"</p>
+  <div class="card"><h3>Planted problems and whether the method found them</h3><div class="scroll"><table id="t-det"></table></div></div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><h3>Logic by product type</h3>
+      <ul class="tight">
+        <li><b>Basics</b> (T-shirts, jeans, socks): reorder point = d × L + SS, with SS = z·√(L·σ<sub>d</sub>² + d²·σ<sub>L</sub>²) so supplier lead-time variability is inside the formula. Planned at style level, split to sizes by each store's own size curve.</li>
+        <li><b>Seasonal</b> (Ramadan &amp; Eid, Summer, Autumn/Winter): bought once. In season, a weekly review compares projected demand to stock and chooses transfer, markdown (20%, then 35%) or hold, with a 40% clearance in the last 10 days.</li>
+        <li><b>Accessories</b>: core lines (caps, belts, scarves) are replenished like basics; seasonal ones (straw hats, beanies, Eid gift sets) are treated as seasonal.</li>
+        <li><b>No backorders.</b> In a shop, a customer who cannot find the size leaves. Inventory position = on hand + on order + in transit.</li>
+      </ul></div>
+    <div class="card"><h3>Limitations</h3>
+      <ul class="tight">
+        <li>Synthetic data. Every result is a simulated scenario outcome, not a saving at any real retailer.</li>
+        <li>The planning calendar (Ramadan, Eid, school, promotions) is given to the model exactly; in practice those effects must be estimated.</li>
+        <li>One echelon: lead times run supplier → store via a DC that has a daily dispatch limit but never runs out of stock. Real networks have DC stock limits and allocation rules.</li>
+        <li>Lost sales are valued at lost margin only, with no customer-goodwill cost.</li>
+        <li>Seasonal markdown thresholds were set once by judgement and are not optimised; the Ramadan capsule shows no gain over a simple late markdown.</li>
+        <li>Results come from one seed plus five more as a robustness check, not a statistical proof.</li>
+      </ul></div>
+  </div>
+  <p class="foot">Built with Python (NumPy, pandas), DuckDB SQL, and plain HTML/SVG. Stores, SKUs and suppliers are invented. This project does not describe any real retailer's data or supply chain.</p>
+</section>
+</main>
+<div id="tip"></div>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = (s, r=document) => r.querySelector(s);
+const fmt = (v, d=0) => v==null||isNaN(v) ? "–" : Number(v).toLocaleString("en-US",{maximumFractionDigits:d,minimumFractionDigits:d});
+const aed = v => "AED " + fmt(v);
+const pct = (v, d=1) => v==null ? "–" : (v*100).toFixed(d) + "%";
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const tip = $("#tip");
+function showTip(e, html){ tip.innerHTML = html; tip.style.display = "block";
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = e.clientX + 14, y = e.clientY + 14;
+  if (x + w > innerWidth - 8) x = e.clientX - w - 14;
+  if (y + h > innerHeight - 8) y = e.clientY - h - 14;
+  tip.style.left = x + "px"; tip.style.top = y + "px"; }
+function hideTip(){ tip.style.display = "none"; }
+function el(tag, attrs={}, parent){ const n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; }
+function txt(s){ const t = document.createElement("span"); t.textContent = s; return t.innerHTML; }
+
+/* ---------- line chart: series [{name,color,values,dash}], x labels ---------- */
+function lineChart(host, xs, series, {yfmt=v=>v, ymin=null, ymax=null, tipfmt=null}={}){
+  const box = host.querySelector(".chart"); box.innerHTML = "";
+  const W = box.clientWidth || 500, H = +box.dataset.h || 230, m = {l:52, r:12, t:8, b:26};
+  const svg = el("svg", {width:W, height:H, role:"img"}, box);
+  const all = series.flatMap(s => s.values).filter(v => v!=null);
+  let lo = ymin ?? Math.min(...all), hi = ymax ?? Math.max(...all);
+  if (ymin==null) lo = lo - (hi-lo)*0.08; if (ymax==null) hi = hi + (hi-lo)*0.08;
+  const X = i => m.l + i*(W-m.l-m.r)/Math.max(xs.length-1,1);
+  const Y = v => H-m.b - (v-lo)/(hi-lo||1)*(H-m.t-m.b);
+  for (let k=0;k<=4;k++){ const v = lo + (hi-lo)*k/4, y = Y(v);
+    el("line",{x1:m.l,x2:W-m.r,y1:y,y2:y,stroke:css("--line")},svg);
+    const t = el("text",{x:m.l-6,y:y+4,"text-anchor":"end"},svg); t.textContent = yfmt(v); }
+  const step = Math.ceil(xs.length / Math.max(2, Math.floor((W-m.l)/70)));
+  xs.forEach((x,i)=>{ if (i%step===0){ const t = el("text",{x:X(i),y:H-8,"text-anchor":"middle"},svg);
+    t.textContent = new Date(x).toLocaleDateString("en-GB",{day:"numeric",month:"short"}); }});
+  series.forEach(s=>{ const d = s.values.map((v,i)=> (v==null?"":(i&&s.values[i-1]!=null?"L":"M")+X(i).toFixed(1)+","+Y(v).toFixed(1))).join("");
+    el("path",{d, fill:"none", stroke:s.color, "stroke-width":2, "stroke-dasharray":s.dash||"", "stroke-linejoin":"round"},svg); });
+  const cross = el("line",{y1:m.t,y2:H-m.b,stroke:css("--ink3"),"stroke-width":1,opacity:0},svg);
+  const dots = series.map(s=>el("circle",{r:4,fill:s.color,stroke:css("--surface"),"stroke-width":2,opacity:0},svg));
+  const hit = el("rect",{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:"transparent"},svg);
+  hit.addEventListener("mousemove", e=>{ const r = svg.getBoundingClientRect();
+    const i = Math.max(0, Math.min(xs.length-1, Math.round((e.clientX-r.left-m.l)/((W-m.l-m.r)/Math.max(xs.length-1,1)))));
+    cross.setAttribute("x1",X(i)); cross.setAttribute("x2",X(i)); cross.setAttribute("opacity",1);
+    series.forEach((s,k)=>{ if (s.values[i]==null) return; dots[k].setAttribute("cx",X(i)); dots[k].setAttribute("cy",Y(s.values[i])); dots[k].setAttribute("opacity",1); });
+    showTip(e, `<b>Week of ${new Date(xs[i]).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}</b><br>` +
+      series.map(s=>`<span style="color:${s.color}">●</span> ${s.name}: ${(tipfmt||yfmt)(s.values[i])}`).join("<br>")); });
+  hit.addEventListener("mouseleave", ()=>{ hideTip(); cross.setAttribute("opacity",0); dots.forEach(d=>d.setAttribute("opacity",0)); });
+}
+
+/* ---------- grouped bar chart (handles negatives) ---------- */
+function barChart(host, cats, series, {yfmt=v=>v, tipfmt=null}={}){
+  const box = host.querySelector(".chart"); box.innerHTML = "";
+  const W = box.clientWidth || 500, H = +box.dataset.h || 240, m = {l:46, r:10, t:10, b:34};
+  const svg = el("svg",{width:W,height:H},box);
+  const all = series.flatMap(s=>s.values).concat([0]);
+  let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi-lo)*0.12; lo -= lo<0?pad:0; hi += hi>0?pad:pad*0.2;
+  const Y = v => H-m.b - (v-lo)/(hi-lo)*(H-m.t-m.b);
+  for (let k=0;k<=4;k++){ const v = lo+(hi-lo)*k/4, y = Y(v); el("line",{x1:m.l,x2:W-m.r,y1:y,y2:y,stroke:css("--line")},svg);
+    const t = el("text",{x:m.l-6,y:y+4,"text-anchor":"end"},svg); t.textContent = yfmt(v); }
+  const gw = (W-m.l-m.r)/cats.length, bw = Math.min(42, (gw*0.7)/series.length);
+  cats.forEach((c,i)=>{ const cx = m.l + gw*i + gw/2;
+    const t = el("text",{x:cx,y:H-14,"text-anchor":"middle"},svg); t.textContent = c;
+    series.forEach((s,k)=>{ const v = s.values[i], x = cx - (series.length*bw)/2 + k*bw + 1;
+      const y0 = Y(0), y1 = Y(v); const r = el("rect",{x, y:Math.min(y0,y1), width:bw-2, height:Math.max(1,Math.abs(y1-y0)), rx:3, fill:s.color},svg);
+      const lab = el("text",{x:x+(bw-2)/2, y: v<0? y1+13 : y1-4, "text-anchor":"middle", style:"fill:"+css("--ink")+";font-size:10.5px"},svg); lab.textContent = (tipfmt||yfmt)(v);
+      r.addEventListener("mousemove", e=>showTip(e, `<b>${txt(c)}</b><br><span style="color:${s.color}">●</span> ${s.name}: ${(tipfmt||yfmt)(v)}`));
+      r.addEventListener("mouseleave", hideTip); }); });
+  el("line",{x1:m.l,x2:W-m.r,y1:Y(0),y2:Y(0),stroke:css("--ink3")},svg);
+}
+
+function table(id, cols, rows){
+  const t = typeof id==="string" ? $(id) : id;
+  t.innerHTML = "<thead><tr>" + cols.map(c=>`<th class="${c.n?'n':''}">${c.h}</th>`).join("") + "</tr></thead><tbody>" +
+    rows.map(r=>"<tr>"+cols.map(c=>`<td class="${c.n?'n':''}">${c.f? c.f(r[c.k], r) : txt(r[c.k] ?? "")}</td>`).join("")+"</tr>").join("") + "</tbody>";
+}
+
+/* =========================== render =========================== */
+const K = D.kpis, M = D.meta;
+$("#banner").innerHTML = `All data is synthetic and generated from a published seed (${M.seed}). Four hypothetical stores, ${M.n_skus} SKUs, ${fmt(M.n_series)} store-SKU-size lines, 1 Jan – 30 Nov 2026. "Observed" history = what a store team running a simple min/max rule would have recorded. Results are simulated scenario outcomes, not savings at any real retailer.`;
+document.querySelectorAll(".asof").forEach(n=>n.textContent = new Date(M.as_of).toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}));
+$("#p1lead").textContent = `Snapshot on 30 November 2026, the Monday after White Friday week and two days before National Day.`;
+
+const tiles = [
+  ["Inventory value at cost", aed(K.inventory_value_aed), `${fmt(K.units_on_hand)} units across ${M.stores.length} stores`],
+  ["Days of cover", fmt(K.days_cover,1), "On hand ÷ average daily sales, last 28 days"],
+  ["Stockout exposure", `${K.stockout_exposure_style_stores} lines`, `of ${K.replenished_style_stores} replenished store-SKUs will run short before a new order can land`],
+  ["Core size out (M or L)", `${K.core_size_out_style_stores} lines`, "Replenished store-SKUs with a broken size run today"],
+  ["Excess stock", aed(K.excess_value_aed), "More than 90 days of cover, mostly Autumn/Winter"],
+  ["Estimated lost sales, last 28 days", `${fmt(K.est_lost_units_28d)} units`, `From in-stock-day demand rates. True value (synthetic only): ${fmt(K.true_lost_units_28d)}`],
+  ["Orders recommended today", `${K.orders_recommended}`, `${fmt(K.order_units_recommended)} units in total`],
+];
+$("#kpis").innerHTML = tiles.map(t=>`<div class="card tile"><div class="lab">${t[0]}</div><div class="val">${t[1]}</div><div class="ctx">${t[2]}</div></div>`).join("");
+
+function drawP1(){
+  const T = D.trend, xs = T.map(r=>r.week);
+  lineChart($("#c-instock"), xs, [{name:"Benchmark (observed)", color:css("--s2"), values:T.map(r=>r.benchmark_instock)}], {yfmt:v=>pct(v,0), tipfmt:v=>pct(v,1)});
+  lineChart($("#c-invval"), xs, [{name:"Inventory value", color:css("--s2"), values:T.map(r=>r.benchmark_value)}], {yfmt:v=>fmt(v/1000)+"k", tipfmt:aed, ymin:0});
+}
+table("#t-health", [
+  {h:"Category",k:"category",f:v=>v==="All"?"<b>All</b>":txt(v[0].toUpperCase()+v.slice(1))},
+  {h:"Store-SKU lines",k:"style_stores",n:1,f:v=>fmt(v)},{h:"Units on hand",k:"units_on_hand",n:1,f:v=>fmt(v)},
+  {h:"Value at cost",k:"inventory_value_aed",n:1,f:aed},{h:"Days of cover",k:"days_cover",n:1,f:v=>fmt(v,1)},
+  {h:"Excess value",k:"excess_value_aed",n:1,f:aed},{h:"Lines fully out",k:"style_stores_fully_out",n:1,f:v=>fmt(v)}], D.health_by_category);
+
+/* page 2 */
+(function(){
+  const rows = D.abc_xyz, tot = rows.reduce((a,r)=>a+r.store_sales_value_aed,0);
+  let h = `<table class="matrix"><thead><tr><th></th>${["X steady","Y variable","Z erratic"].map(x=>`<th style="text-align:center">${x}</th>`).join("")}</tr></thead><tbody>`;
+  ["A","B","C"].forEach(a=>{ h += `<tr><th>${a}</th>`; ["X","Y","Z"].forEach(x=>{
+    const g = rows.filter(r=>r.abc===a && r.xyz===x), v = g.reduce((s,r)=>s+r.store_sales_value_aed,0), sh = v/tot;
+    const bg = sh>0.3?"var(--seq3)":sh>0.1?"var(--seq2)":sh>0?"var(--seq1)":"var(--seq0)", fg = sh>0.1?"#fff":"var(--ink)";
+    h += `<td style="background:${bg};color:${fg}" title="${[...new Set(g.map(r=>r.sku_id+' '+r.name))].slice(0,12).join(', ')}"><b>${g.length}</b> lines<br><span style="font-size:12px">${pct(sh,0)} of sales</span></td>`; });
+    h += "</tr>"; });
+  $("#matrix").innerHTML = h + `</tbody></table><p class="note" style="margin-top:10px">Service level follows ABC: A 98%, B 95%, C 90%. Hover a cell for its SKUs.</p>`;
+  const sizes = ["XS","S","M","L","XL","XXL"], stores = M.stores.map(s=>s.store_id);
+  let t = `<table class="heat"><thead><tr><th></th>${sizes.map(s=>`<th style="text-align:center">${s}</th>`).join("")}</tr></thead><tbody>`;
+  stores.forEach(st=>{ t += `<tr><th>${st}</th>`; sizes.forEach(sz=>{ const r = D.size_heat.find(x=>x.store_id===st && x.size===sz); const v = r?r.value:null;
+    const bg = v>=0.9?"var(--seq0)":v>=0.8?"var(--seq1)":v>=0.7?"var(--seq2)":"var(--seq3)", fg = v<0.8?"#fff":"var(--ink)";
+    t += `<td style="background:${bg};color:${fg}">${pct(v,0)}</td>`; }); t += "</tr>"; });
+  $("#heat").innerHTML = t + `</tbody></table><p class="note" style="margin-top:10px">Darker = more days out of stock (bands: 90%+, 80–90%, 70–80%, under 70%).</p>`;
+})();
+function drawP2(){
+  const stores = M.stores.map(s=>s.store_id), cols = [css("--s1"),css("--s2"),css("--s3"),"#f2a600"];
+  const weeks = [...new Set(D.broken_runs.map(r=>r.week_start))].sort();
+  $("#lg-broken").innerHTML = stores.map((s,i)=>`<span><i style="background:${cols[i]}"></i>${s}</span>`).join("");
+  lineChart($("#c-broken"), weeks, stores.map((s,i)=>({name:s, color:cols[i], values:weeks.map(w=>{const r=D.broken_runs.find(x=>x.store_id===s&&x.week_start===w);return r?r.value:null;})})), {yfmt:v=>pct(v,0), ymin:0});
+  const b = D.censoring_bands;
+  barChart($("#c-cens"), b.map(r=>`${r.stockout_band} (${r.style_stores})`), [
+    {name:"All sales days", color:css("--s2"), values:b.map(r=>r.naive_bias)},
+    {name:"In-stock days only", color:css("--s1"), values:b.map(r=>r.corrected_bias)}], {yfmt:v=>pct(v,0)});
+  const ex = D.censoring_example;
+  $("#censex-t").textContent = `${ex.name} at ${ex.store_id}`;
+  $("#censex-n").textContent = `Units per week, benchmark history. Sizes were out of stock on ${pct(ex.size_stockout_rate,0)} of days. The gap is lost sales: invisible in real data.`;
+  lineChart($("#c-censex"), ex.weeks.map(r=>r.week), [
+    {name:"True demand", color:css("--ink3"), values:ex.weeks.map(r=>r.demand), dash:"5 4"},
+    {name:"Observed sales", color:css("--s1"), values:ex.weeks.map(r=>r.sales)}], {yfmt:v=>fmt(v), ymin:0});
+}
+table("#t-stores", [{h:"Store",k:"store_id"},{h:"Format",k:"name"},{h:"Sales value",k:"sales_value_aed",n:1,f:aed},
+  {h:"Units sold",k:"sales_units",n:1,f:v=>fmt(v)},{h:"Basics in-stock",k:"basics_instock_rate",n:1,f:v=>pct(v)},
+  {h:"Inventory today",k:"inventory_value_aed",n:1,f:aed},{h:"Season-end clearance units",k:"season_end_clearance_units",n:1,f:v=>fmt(v)}], D.stores);
+
+/* page 3 */
+$("#cap").textContent = fmt(M.dc_capacity_units_per_day); $("#ordn").textContent = D.orders_all_count;
+[...new Set(D.orders.map(r=>r.store_id))].sort().forEach(s=>$("#f-store").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+[...new Set(D.orders.map(r=>r.supplier_id))].sort().forEach(s=>$("#f-sup").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+function drawOrders(){
+  const st = $("#f-store").value, sp = $("#f-sup").value;
+  const rows = D.orders.filter(r=>(!st||r.store_id===st)&&(!sp||r.supplier_id===sp));
+  table("#t-orders", [{h:"#",k:"priority_rank",n:1},{h:"Store",k:"store_id"},{h:"SKU",k:"name",f:(v,r)=>`${txt(v)}<br><span class="note">${r.sku_id} · ${r.supplier_id} · class ${r.abc}</span>`},
+    {h:"Demand/day",k:"d_forecast",n:1,f:v=>fmt(v,1)},{h:"Lead time",k:"lead_time_days",n:1,f:(v,r)=>`${fmt(v,1)} ± ${fmt(r.lead_time_sd_days,1)} d`},
+    {h:"Safety stock",k:"safety_stock",n:1,f:v=>fmt(v)},{h:"Reorder point",k:"reorder_point",n:1,f:v=>fmt(v)},
+    {h:"On hand + on order",k:"inventory_position",n:1,f:(v,r)=>`${fmt(r.on_hand)} + ${fmt(r.on_order)}`},
+    {h:"Order",k:"order_qty",n:1,f:v=>`<b>${fmt(v)}</b>`},{h:"Size split",k:"size_split",f:v=>`<span class="note">${txt(v)}</span>`},
+    {h:"Priority (AED)",k:"priority_score_aed",n:1,f:v=>fmt(v)}], rows);
+}
+$("#f-store").onchange = drawOrders; $("#f-sup").onchange = drawOrders; drawOrders();
+const lever = v => `<span class="pill ${v.startsWith('RECEIVE')?'recv':v.startsWith('SEND')?'send':v.startsWith('MARK')?'md':''}">${v.toLowerCase()}</span>`;
+table("#t-seas", [{h:"Lever",k:"lever",f:lever},{h:"Store",k:"store_id"},{h:"SKU",k:"name",f:(v,r)=>`${txt(v)} <span class="note">${r.sku_id}</span>`},
+  {h:"Bought",k:"bought",n:1},{h:"Sold",k:"sold",n:1},{h:"Sell-through",k:"sell_through",n:1,f:v=>pct(v,0)},
+  {h:"Plan to date",k:"plan_sell_through",n:1,f:v=>pct(v,0)},{h:"On hand",k:"on_hand",n:1},
+  {h:"Forecast to 31 Jan",k:"projected_remaining_demand",n:1,f:v=>fmt(v)},{h:"Projected leftover",k:"projected_leftover",n:1,f:v=>fmt(v)}],
+  [...D.seasonal_actions].sort((a,b)=>{ const o={"RECEIVE TRANSFER":0,"SEND TRANSFER":1,"MARKDOWN CANDIDATE":2,"HOLD":3}; return o[a.lever]-o[b.lever] || a.projected_leftover-b.projected_leftover; }));
+$("#t-btr").innerHTML = D.basics_transfers.length ? "" : `<p>No basics line meets the rule today: no store holds more than 45 days of cover on a line another store is about to run out of. During the year the proposed policy made <b>${fmt(D.policy_comparison.find(r=>r.metric==="transfers").proposed)}</b> transfers (basics and seasonal), mostly in the first quarter, when the neighbourhood store was overstocked on T-shirts.</p>`;
+table("#t-sup", [{h:"Supplier",k:"name"},{h:"Quoted",k:"quoted_lead_time_days",n:1,f:v=>fmt(v)+" d"},{h:"Actual mean",k:"actual_mean_days",n:1,f:v=>fmt(v,1)+" d"},
+  {h:"SD",k:"actual_sd_days",n:1,f:v=>fmt(v,1)+" d"},{h:"Range",k:"min_days",n:1,f:(v,r)=>`${fmt(v)}–${fmt(r.max_days)}`},
+  {h:">3 days late",k:"share_more_than_3_days_late",n:1,f:v=>pct(v,0)},{h:"POs",k:"purchase_orders",n:1}], D.suppliers);
+
+/* page 4 */
+const G = D.what_if, SLs = [...new Set(G.filter(r=>r.policy==="proposed").map(r=>String(r.service_level)))];
+SLs.forEach(s=>$("#w-sl").insertAdjacentHTML("beforeend", `<option value="${s}" ${s.startsWith("ABC")?"selected":""}>${s.startsWith("ABC")?"ABC: 98 / 95 / 90%":pct(+s,1).replace(".0%","%")}</option>`));
+function pick(pol, sl, dl, sh){ return G.find(r=>r.policy===pol && (pol==="benchmark"||String(r.service_level)===sl) && r.delay_days==dl && Math.abs(r.demand_shock-sh)<1e-9); }
+function drawWhatIf(){
+  const sl = $("#w-sl").value, dl = +$("#w-delay").value, sh = +$("#w-shock").value;
+  const p = pick("proposed",sl,dl,sh), b = pick("benchmark",null,dl,sh);
+  const card = (lab, pv, bv, f, better) => { const d = pv-bv, good = better==="up"? d>0 : d<0;
+    const df = f===undefined?null:(lab.startsWith("Fill")? (d*100).toFixed(1)+" pts" : f(d));
+    return `<div class="card tile"><div class="lab">${lab}</div><div class="val">${f(pv)}</div><div class="ctx">Benchmark ${f(bv)} · <span class="delta ${good?'up':'dn'}">${d>0?'+':''}${df}</span></div></div>`; };
+  $("#w-out").innerHTML = card("Fill rate, replenished items", p.fill_rate_basics, b.fill_rate_basics, v=>pct(v,1), "up")
+    + card("Lost margin, replenished items", p.lost_margin_basics_aed, b.lost_margin_basics_aed, aed, "dn")
+    + card("Average inventory, replenished", p.avg_inventory_value_basics_aed, b.avg_inventory_value_basics_aed, aed, "dn")
+    + card("Net contribution, all items", p.net_contribution_aed, b.net_contribution_aed, aed, "up");
+  const pts = SLs.filter(s=>!s.startsWith("ABC")).map(s=>pick("proposed",s,dl,sh));
+  const host = $("#c-sl"), box = host.querySelector(".chart"); box.innerHTML = "";
+  const W = box.clientWidth||500, H = 250, m = {l:46,r:16,t:10,b:36}, svg = el("svg",{width:W,height:H},box);
+  const xsv = pts.map(r=>r.avg_inventory_value_basics_aed).concat([b.avg_inventory_value_basics_aed]), ysv = pts.map(r=>r.fill_rate_basics).concat([b.fill_rate_basics]);
+  const x0 = Math.min(...xsv)*0.95, x1 = Math.max(...xsv)*1.03, y0 = Math.min(...ysv)-0.01, y1 = Math.max(...ysv)+0.01;
+  const X = v => m.l + (v-x0)/(x1-x0)*(W-m.l-m.r), Y = v => H-m.b - (v-y0)/(y1-y0)*(H-m.t-m.b);
+  for (let k=0;k<=4;k++){ const v=y0+(y1-y0)*k/4; el("line",{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:css("--line")},svg); el("text",{x:m.l-6,y:Y(v)+4,"text-anchor":"end"},svg).textContent = pct(v,0); }
+  for (let k=0;k<=3;k++){ const v=x0+(x1-x0)*k/3; el("text",{x:X(v),y:H-18,"text-anchor":"middle"},svg).textContent = fmt(v/1000)+"k"; }
+  el("text",{x:(W+m.l)/2,y:H-3,"text-anchor":"middle"},svg).textContent = "Average inventory, AED at cost";
+  el("path",{d:pts.map((r,i)=>(i?"L":"M")+X(r.avg_inventory_value_basics_aed)+","+Y(r.fill_rate_basics)).join(""),fill:"none",stroke:css("--s1"),"stroke-width":2},svg);
+  const dot = (r,c,lab)=>{ const g = el("circle",{cx:X(r.avg_inventory_value_basics_aed),cy:Y(r.fill_rate_basics),r:6,fill:c,stroke:css("--surface"),"stroke-width":2},svg);
+    el("text",{x:X(r.avg_inventory_value_basics_aed)+8,y:Y(r.fill_rate_basics)+14},svg).textContent = lab;
+    el("circle",{cx:X(r.avg_inventory_value_basics_aed),cy:Y(r.fill_rate_basics),r:14,fill:"transparent"},svg).addEventListener("mousemove",e=>showTip(e,`<b>${lab}</b><br>Fill rate ${pct(r.fill_rate_basics)}<br>Avg inventory ${aed(r.avg_inventory_value_basics_aed)}<br>Lost margin ${aed(r.lost_margin_basics_aed)}`));
+    svg.lastChild.addEventListener("mouseleave",hideTip); };
+  pts.forEach(r=>dot(r,css("--s1"),pct(+r.service_level,1).replace(".0%","%")));
+  dot(b,css("--s2"),"Benchmark");
+}
+["#w-sl","#w-delay","#w-shock"].forEach(s=>$(s).onchange = drawWhatIf);
+
+const WE = D.worked_example, calcF = [
+  ["d","Demand per day (units)",WE.d_forecast,0.1],["sd","Daily demand SD",WE.sd_daily,0.1],
+  ["L","Lead time (days)",WE.lead_time_days,0.5],["sL","Lead time SD (days)",WE.lead_time_sd_days,0.5],
+  ["p","Service level",WE.service_level,0.005],["R","Review period (days)",14,1]];
+$("#calc").innerHTML = calcF.map(f=>`<label>${f[1]}<input type="number" id="k-${f[0]}" value="${f[2]}" step="${f[3]}"></label>`).join("");
+function normInv(p){ // Acklam's inverse-normal approximation
+  const a=[-39.69683028665376,220.9460984245205,-275.9285104469687,138.357751867269,-30.66479806614716,2.506628277459239],
+        b=[-54.47609879822406,161.5858368580409,-155.6989798598866,66.80131188771972,-13.28068155288572],
+        c=[-0.007784894002430293,-0.3223964580411365,-2.400758277161838,-2.549732539343734,4.374664141464968,2.938163982698783],
+        d=[0.007784695709041462,0.3224671290700398,2.445134137142996,3.754408661907416];
+  const q = p<0.02425? Math.sqrt(-2*Math.log(p)) : p>1-0.02425? Math.sqrt(-2*Math.log(1-p)) : null;
+  if (q===null){ const r=p-0.5, s=r*r; return (((((a[0]*s+a[1])*s+a[2])*s+a[3])*s+a[4])*s+a[5])*r/(((((b[0]*s+b[1])*s+b[2])*s+b[3])*s+b[4])*s+1); }
+  const v = (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1); return p<0.5? v : -v; }
+function calc(){
+  const g = k => +$("#k-"+k).value, d=g("d"), sd=g("sd"), L=g("L"), sL=g("sL"), p=Math.min(0.9999,Math.max(0.5,g("p"))), R=g("R");
+  const z = normInv(p), ss = z*Math.sqrt(L*sd*sd + d*d*sL*sL), ss0 = z*sd*Math.sqrt(L), rop = d*L+ss, S = rop + d*R;
+  $("#calc-out").innerHTML = `z = ${z.toFixed(3)}  (service level ${pct(p,1)})<br>`+
+   `SS = z·√(L·σd² + d²·σL²) = ${z.toFixed(2)}·√(${fmt(L,1)}·${fmt(sd,2)}² + ${fmt(d,2)}²·${fmt(sL,1)}²) = <b>${fmt(ss,1)}</b><br>`+
+   `   (if lead time were constant: z·σd·√L = ${fmt(ss0,1)})<br>`+
+   `ROP = d·L + SS = ${fmt(d,2)}·${fmt(L,1)} + ${fmt(ss,1)} = <b>${fmt(rop,1)}</b><br>`+
+   `Order-up-to = ROP + d·R = <b>${fmt(S,1)}</b><br>`+
+   `Today: on hand ${WE.on_hand} + on order ${WE.on_order} = ${WE.inventory_position} → ${WE.inventory_position<=rop?`<b>order ${fmt(Math.ceil(S-WE.inventory_position))}</b>`:"no order"}`; }
+calcF.forEach(f=>$("#k-"+f[0]).oninput = calc); calc();
+
+const PC = Object.fromEntries(D.policy_comparison.map(r=>[r.metric,r])), SS_ = D.seeds_summary;
+$("#p4lead").innerHTML = `Same demand, same seed, same lead-time draws, 1 Jan – 30 Nov. On five further seeds the proposed policy raised net contribution every time (by ${aed(SS_.net_contribution_aed?.min)} to ${aed(SS_.net_contribution_aed?.max)}) and lowered average inventory every time; Ramadan capsule revenue was better in only ${SS_.revenue_RAMADAN_EID_aed?.n_better} of 5.`;
+const compRows = [
+  ["Fill rate, replenished items","fill_rate_basics",v=>pct(v),"up"],["Fill rate, seasonal (demand includes markdown uplift)","fill_rate_seasonal",v=>pct(v),"up"],
+  ["Lost units, replenished","lost_units_basics",v=>fmt(v),"dn"],["Lost margin, all items","lost_margin_aed",aed,"dn"],
+  ["Revenue","revenue_aed",aed,"up"],["Average inventory at cost","avg_inventory_value_aed",aed,"dn"],["Holding cost (25% a year)","holding_cost_aed",aed,"dn"],
+  ["Transfer cost","transfer_cost_aed",aed,"dn"],["Season-end leftover units","season_end_leftover_units",v=>fmt(v),"dn"],["Salvage loss on leftovers","salvage_loss_aed",aed,"dn"],
+  ["Summer sell-through","sell_through_SUMMER",v=>pct(v),"up"],["Ramadan & Eid revenue","revenue_RAMADAN_EID_aed",aed,"up"],
+  ["Broken size runs (share of style-store-days)","broken_size_run_rate",v=>pct(v),"dn"],["Purchase order lines raised","purchase_order_lines",v=>fmt(v),"dn"],
+  ["Net contribution (gross margin − holding − transfers − salvage loss)","net_contribution_aed",aed,"up"]];
+$("#t-comp").innerHTML = "<thead><tr><th>Metric</th><th class='n'>Benchmark</th><th class='n'>Proposed</th><th class='n'>Difference</th></tr></thead><tbody>" +
+  compRows.map(([lab,k,f,bt])=>{ const r = PC[k], d = r.proposed-r.benchmark, good = bt==="up"?d>0:d<0;
+    const df = (k.includes("rate")||k.includes("sell_through")) ? (d*100).toFixed(1)+" pts" : f(d);
+    return `<tr><td>${lab}</td><td class="n">${f(r.benchmark)}</td><td class="n">${f(r.proposed)}</td><td class="n"><span class="delta ${Math.abs(d)<1e-9?'':good?'up':'dn'}">${d>0?'+':''}${df}</span></td></tr>`; }).join("") + "</tbody>";
+
+/* page 5 */
+table("#t-det", [{h:"",k:"id"},{h:"What I planted",k:"planted"},{h:"What the method showed",k:"found"},
+  {h:"Verdict",k:"verdict",f:v=>`<span class="pill ${v==='Found'?'found':'part'}">${txt(v)}</span>`}], D.detection);
+
+/* tabs & redraw */
+const drawn = {};
+function drawPage(p){ if (p==="p1") drawP1(); if (p==="p2") drawP2(); if (p==="p4") drawWhatIf(); drawn[p]=true; }
+document.querySelectorAll("#tabs button").forEach(b=>b.onclick = ()=>{
+  document.querySelectorAll("#tabs button").forEach(x=>x.setAttribute("aria-selected", x===b));
+  document.querySelectorAll("section.page").forEach(s=>s.classList.toggle("on", s.id===b.dataset.p));
+  drawPage(b.dataset.p); });
+drawPage("p1");
+let rt; addEventListener("resize", ()=>{ clearTimeout(rt); rt = setTimeout(()=>{ const on = document.querySelector("section.page.on").id; drawPage(on); }, 150); });
+</script>
+</body>
+</html>

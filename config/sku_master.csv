@@ -1,0 +1,71 @@
+sku_id,name,category,subcategory,season,replenishment,sized,kids,supplier_id,unit_cost,price,base_daily_demand,profile
+B01,Crew-neck T-shirt White,basics,tops,,continuous,Y,N,SUP-B,12,39,5.0,summer_up
+B02,Crew-neck T-shirt Black,basics,tops,,continuous,Y,N,SUP-B,12,39,4.5,summer_up
+B03,Crew-neck T-shirt Navy,basics,tops,,continuous,Y,N,SUP-B,12,39,3.0,summer_up
+B04,V-neck T-shirt White,basics,tops,,continuous,Y,N,SUP-B,12,39,2.0,summer_up
+B05,Crew-neck T-shirt Grey Marl,basics,tops,,continuous,Y,N,SUP-B,12,39,3.0,summer_up
+B06,Oversized T-shirt Sand,basics,tops,,continuous,Y,N,SUP-B,15,49,1.8,summer_up
+B07,Pique Polo White,basics,tops,,continuous,Y,N,SUP-B,22,69,2.2,summer_up
+B08,Pique Polo Navy,basics,tops,,continuous,Y,N,SUP-B,22,69,2.0,summer_up
+B09,Oxford Shirt White,basics,shirts,,continuous,Y,N,SUP-A,35,109,1.6,flat
+B10,Oxford Shirt Blue,basics,shirts,,continuous,Y,N,SUP-A,35,109,1.4,flat
+B11,Slim Jeans Indigo,basics,bottoms,,continuous,Y,N,SUP-A,45,149,2.0,summer_down
+B12,Straight Jeans Black,basics,bottoms,,continuous,Y,N,SUP-A,45,149,1.5,summer_down
+B13,Chinos Beige,basics,bottoms,,continuous,Y,N,SUP-A,38,119,1.6,flat
+B14,Chinos Navy,basics,bottoms,,continuous,Y,N,SUP-A,38,119,1.2,flat
+B15,Jogger Grey,basics,bottoms,,continuous,Y,N,SUP-A,28,89,1.4,flat
+B16,Zip Hoodie Black,basics,tops,,continuous,Y,N,SUP-A,40,129,0.9,winter_up
+B17,Leggings Black,basics,bottoms,,continuous,Y,N,SUP-B,18,59,1.8,flat
+B18,Ribbed Tank White,basics,tops,,continuous,Y,N,SUP-B,10,29,1.5,summer_up
+B19,Long-sleeve Modest Tunic Black,basics,tops,,continuous,Y,N,SUP-D,30,99,1.6,flat
+B20,Long-sleeve Modest Tunic Navy,basics,tops,,continuous,Y,N,SUP-D,30,99,1.0,flat
+B21,Cotton Pyjama Set Grey,basics,loungewear,,continuous,Y,N,SUP-B,28,89,0.8,flat
+B22,Dry-fit Sports T-shirt Black,basics,sport,,continuous,Y,N,SUP-B,16,55,1.2,flat
+B23,Sports Shorts Black,basics,sport,,continuous,Y,N,SUP-B,15,49,1.0,summer_up
+B24,Lightweight Cardigan Beige,basics,tops,,continuous,Y,N,SUP-A,32,99,0.8,flat
+B25,Ankle Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,8,25,3.0,flat
+B26,Crew Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,9,29,2.0,flat
+B27,No-show Socks 3-pack,basics,socks,,continuous,N,N,SUP-E,8,25,1.5,flat
+R01,Embroidered Maxi Dress Ivory,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,85,279,2.2,flat
+R02,Maxi Dress Emerald,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,75,249,1.8,flat
+R03,Linen Long Shirt White,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,45,149,2.0,flat
+R04,Linen Long Shirt Sage,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,45,149,1.4,flat
+R05,Occasion Open Kimono Black,seasonal,occasion,RAMADAN_EID,one_time,Y,N,SUP-D,60,199,1.2,flat
+R06,Kids Eid Dress Gold,seasonal,kids,RAMADAN_EID,one_time,Y,Y,SUP-D,40,129,1.5,flat
+R07,Kids Linen Set White,seasonal,kids,RAMADAN_EID,one_time,Y,Y,SUP-D,35,119,1.3,flat
+S01,Linen Shirt White,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,40,129,2.4,flat
+S02,Linen Shirt Sky,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,40,129,1.6,flat
+S03,Linen Trousers Sand,seasonal,bottoms,SUMMER,one_time,Y,N,SUP-D,45,149,1.5,flat
+S04,Swim Shorts Navy,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,25,79,1.6,flat
+S05,Swim Shorts Palm Print,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,25,79,1.2,flat
+S06,Swimsuit Black,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,35,119,1.1,flat
+S07,Cotton Shorts Khaki,seasonal,bottoms,SUMMER,one_time,Y,N,SUP-B,20,69,2.0,flat
+S08,Sleeveless Dress Floral,seasonal,dresses,SUMMER,one_time,Y,N,SUP-D,38,129,1.3,flat
+S09,Resort Shirt Print,seasonal,shirts,SUMMER,one_time,Y,N,SUP-D,32,99,1.2,flat
+S10,UV Rash Guard,seasonal,swim,SUMMER,one_time,Y,N,SUP-A,28,89,0.9,flat
+W01,Light Puffer Jacket Black,seasonal,outerwear,AW,one_time,Y,N,SUP-C,80,249,1.4,flat
+W02,Light Puffer Jacket Olive,seasonal,outerwear,AW,one_time,Y,N,SUP-C,80,249,0.8,flat
+W03,Merino Crew Knit Navy,seasonal,knitwear,AW,one_time,Y,N,SUP-A,55,179,1.2,flat
+W04,Merino Crew Knit Camel,seasonal,knitwear,AW,one_time,Y,N,SUP-A,55,179,1.0,flat
+W05,Denim Jacket,seasonal,outerwear,AW,one_time,Y,N,SUP-A,60,189,1.1,flat
+W06,Fleece Zip Jacket Grey,seasonal,outerwear,AW,one_time,Y,N,SUP-C,35,119,1.2,flat
+W07,Wool-blend Overshirt Check,seasonal,shirts,AW,one_time,Y,N,SUP-A,50,159,0.9,flat
+W08,Knit Dress Charcoal,seasonal,dresses,AW,one_time,Y,N,SUP-A,48,159,0.8,flat
+A01,Baseball Cap Black,accessories,headwear,,continuous,N,N,SUP-C,10,39,1.5,summer_up
+A02,Baseball Cap Beige,accessories,headwear,,continuous,N,N,SUP-C,10,39,1.0,summer_up
+A03,Canvas Tote Bag,accessories,bags,,continuous,N,N,SUP-C,12,45,1.2,flat
+A04,Leather Belt Brown,accessories,belts,,continuous,N,N,SUP-C,18,69,0.6,flat
+A05,Leather Belt Black,accessories,belts,,continuous,N,N,SUP-C,18,69,0.8,flat
+A06,Everyday Scarf Black,accessories,scarves,,continuous,N,N,SUP-D,14,49,1.2,flat
+A07,Everyday Scarf Beige,accessories,scarves,,continuous,N,N,SUP-D,14,49,0.9,flat
+A08,Crossbody Bag Black,accessories,bags,,continuous,N,N,SUP-C,30,99,0.6,flat
+A09,Sunglasses Classic,accessories,eyewear,,continuous,N,N,SUP-C,20,79,1.0,summer_up
+A10,Sunglasses Round,accessories,eyewear,,continuous,N,N,SUP-C,20,79,0.7,summer_up
+A11,Phone Crossbody Pouch,accessories,bags,,continuous,N,N,SUP-C,15,59,0.5,flat
+A12,Hair Clip Set,accessories,hair,,continuous,N,N,SUP-C,5,19,0.8,flat
+A13,Straw Sun Hat,accessories,headwear,SUMMER,one_time,N,N,SUP-C,15,59,1.0,flat
+A14,Beach Towel Stripe,accessories,beach,SUMMER,one_time,N,N,SUP-C,18,69,0.8,flat
+A15,Ribbed Beanie Grey,accessories,headwear,AW,one_time,N,N,SUP-C,8,35,0.7,flat
+A16,Soft-knit Wrap Camel,accessories,scarves,AW,one_time,N,N,SUP-D,25,89,0.6,flat
+A17,Eid Gift Set,accessories,gifting,RAMADAN_EID,one_time,N,N,SUP-D,30,99,1.4,flat
+A18,Embellished Clutch,accessories,bags,RAMADAN_EID,one_time,N,N,SUP-C,28,99,0.7,flat
