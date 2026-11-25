@@ -4,7 +4,7 @@
 
 > **All data is synthetic** and comes from a seeded generator (`config/scenario.json`). The stores, SKUs and suppliers are invented. Results are simulated scenario outcomes, not savings at any real retailer. The project draws on my store-floor experience at Primark and Uniqlo for the *kinds* of problems it models; it does not use or reconstruct either company's data, and it does not describe their supply chains.
 
-**[Interactive dashboard](docs/index.html)** · **[Excel reorder-point calculator](excel/reorder_point_calculator.xlsx)** · **[SQL](sql/)** · **[Quality report](outputs/quality_report.md)**
+**[Interactive dashboard](https://akashgajjar07-hue.github.io/retail-floor-to-planning-desk/)** · **[Excel reorder-point calculator](excel/reorder_point_calculator.xlsx)** · **[SQL](sql/)** · **[Quality report](outputs/quality_report.md)**
 
 ---
 
